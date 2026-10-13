@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>ICEP HUB — Painel de disparos WhatsApp</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Source+Serif+4:wght@400;600&display=swap" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.8.5/d3.min.js"></script>
+<style>
+:root {
+  --bg: #f7f7f5; --panel: #ffffff; --fg: #1f1f1d; --muted: #6b6b66; --line: #e4e3df;
+  --ok: #1f7a45; --warn: #a86a00; --bad: #b3261e;
+  --c1: #2f5bd3; --c2: #2e9e6b; --c3: #d9822b; --grid: #ecebe7;
+  --sans: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --serif: "Source Serif 4", Georgia, "Times New Roman", serif;
+}
+@media (prefers-color-scheme: dark) {
+  :root { --bg: #161615; --panel: #1f1f1d; --fg: #ecebe7; --muted: #a3a29c; --line: #34332f; --grid: #2a2926;
+    --ok: #5cc48a; --warn: #e0a640; --bad: #f07a71; --c1: #7d9cf0; --c2: #5cc48a; --c3: #f0a35c; }
+}
+* { box-sizing: border-box; }
+html, body { margin: 0; background: var(--bg); color: var(--fg); font-family: var(--sans); }
+body { padding: env(safe-area-inset-top, 0px) 0 env(safe-area-inset-bottom, 0px); }
+.wrap { max-width: 1200px; margin-inline: auto; padding: 24px clamp(14px, 3vw, 32px) 48px; display: flex; flex-direction: column; gap: 20px; }
+h1 { font-family: var(--serif); font-weight: 400; font-size: clamp(1.6rem, 3vw, 2.1rem); margin: 0; }
+.lead { color: var(--muted); margin: 6px 0 0; }
+.upd { color: var(--muted); font-size: .8rem; margin-top: 4px; }
+.grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 190px), 1fr)); gap: 14px; }
+.card { background: var(--panel); border: 1px solid var(--line); border-radius: 10px; padding: 18px; display: flex; flex-direction: column; gap: 6px; min-width: 0; }
+.card h2 { font-size: 1rem; font-weight: 600; margin: 0; }
+.label { font-size: .8rem; color: var(--muted); }
+.big { font-family: var(--serif); font-size: 2rem; font-variant-numeric: tabular-nums; line-height: 1.15; }
+.pend { font-size: 1.05rem; color: var(--muted); font-family: var(--sans); }
+.sub, .note { font-size: .8rem; color: var(--muted); margin: 0; font-variant-numeric: tabular-nums; }
+.bar { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
+select { font: inherit; font-size: .85rem; padding: 6px 10px; border: 1px solid var(--line); border-radius: 8px; background: var(--bg); color: var(--fg); }
+.legend { display: flex; gap: 14px; flex-wrap: wrap; font-size: .8rem; color: var(--muted); }
+.legend span::before { content: ""; display: inline-block; width: 10px; height: 10px; border-radius: 2px; margin-right: 6px; background: var(--sw); vertical-align: middle; }
+.chart { position: relative; min-height: 300px; }
+.tip { position: absolute; pointer-events: none; background: var(--panel); border: 1px solid var(--line); border-radius: 8px; box-shadow: 0 4px 16px rgba(0,0,0,.12); padding: 6px 10px; font-size: .8rem; display: none; white-space: nowrap; z-index: 2; }
+.tip .t { color: var(--muted); margin-bottom: 2px; }
+.tbox { overflow: auto; max-height: 420px; }
+table { width: 100%; border-collapse: collapse; font-size: .82rem; font-variant-numeric: tabular-nums; }
+th { position: sticky; top: 0; background: var(--panel); text-align: left; font-weight: 600; color: var(--muted); padding: 8px 10px; border-bottom: 1px solid var(--line); white-space: nowrap; cursor: pointer; }
+td { padding: 7px 10px; border-bottom: 1px solid var(--line); white-space: nowrap; }
+.n { text-align: right; }
+.ok { color: var(--ok); font-weight: 600; } .warn { color: var(--warn); font-weight: 600; } .bad { color: var(--bad); font-weight: 600; }
+footer { color: var(--muted); font-size: .75rem; line-height: 1.5; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <h1>Disparos WhatsApp — ICEP HUB</h1>
+    <p class="lead" id="lead">Carregando…</p>
+    <p class="upd" id="upd"></p>
+  </header>
+
+  <section class="grid">
+    <div class="card"><span class="label">Envios realizados</span><div class="big" id="k-envios">—</div><p class="note">Mensagens da régua aceitas pela Meta</p></div>
+    <div class="card"><span class="label">Mensagens entregues</span><div class="big" id="k-entregues">—</div><p class="sub"><span id="k-tx-ent">—</span> dos envios</p></div>
+    <div class="card"><span class="label">Mensagens lidas</span><div class="big" id="k-lidas">—</div><p class="sub"><span id="k-tx-lid">—</span> das entregues</p></div>
+    <div class="card"><span class="label">Mensagens respondidas</span><div class="big" id="k-resp">—</div><p class="sub"><span id="k-tx-resp">—</span> das entregues</p></div>
+    <div class="card"><span class="label">Tempo médio de retorno do operador</span><div class="big" id="k-tempo">—</div><p class="note" id="k-tempo-nota">Em configuração</p></div>
+  </section>
+
+  <section class="card">
+    <h2>Envios, entregas e respostas por dia</h2>
+    <div class="bar">
+      <label class="label" for="f-ini">De</label><select id="f-ini"></select>
+      <label class="label" for="f-fim">até</label><select id="f-fim"></select>
+      <select id="f-num" aria-label="Número"><option value="">Todos os números</option></select>
+    </div>
+    <div class="legend" id="legenda"></div>
+    <div class="chart" id="chart"></div>
+  </section>
+
+  <section class="card">
+    <h2>Qualidade e status dos números</h2>
+    <p class="note">Leitura da Meta: qualidade, conexão, limite diário e aprovação do nome de exibição</p>
+    <div class="tbox"><table id="t-status"><thead><tr><th>Vendedor</th><th>Número</th><th>Qualidade</th><th>Status</th><th>Limite</th><th>Nome de exibição</th><th>Aprovação do nome</th></tr></thead><tbody></tbody></table></div>
+  </section>
+
+  <section class="card">
+    <h2>Resultado por número</h2>
+    <p class="note">Totais do período selecionado</p>
+    <div class="tbox"><table id="t-num"><thead><tr><th>Vendedor</th><th>Número</th><th class="n">Envios</th><th class="n">Entregues</th><th class="n">% entrega</th><th class="n">Lidas</th><th class="n">Respondidas</th><th class="n">% resposta</th><th class="n">Tempo médio de retorno</th></tr></thead><tbody></tbody></table></div>
+  </section>
+
+  <section class="card">
+    <h2>Detalhe por dia e número</h2>
+    <p class="note">Respeita os filtros acima. Clique no título de uma coluna para ordenar.</p>
+    <div class="tbox"><table id="t-det"><thead><tr><th data-k="data">Data</th><th data-k="vendedor">Vendedor</th><th data-k="numero">Número</th><th class="n" data-k="envios">Envios</th><th class="n" data-k="entregues">Entregues</th><th class="n" data-k="lidas">Lidas</th><th class="n" data-k="respondidas">Respondidas</th></tr></thead><tbody></tbody></table></div>
+  </section>
+
+  <footer>
+    Envios, entregas e leituras: estatísticas de templates da Meta (somente os templates da régua), agrupadas por dia em UTC; os dados da Meta podem chegar com algumas horas de atraso.
+    Respondidas: conversas abertas pelo lead no Canal Aberto do vendedor no Bitrix24.
+    Qualidade e status: leitura direta de cada número na Meta no momento da atualização.
+  </footer>
+</div>
+
+<script>
+const fInt = new Intl.NumberFormat('pt-BR');
+const fPct = v => new Intl.NumberFormat('pt-BR', { minimumFractionDigits: 1, maximumFractionDigits: 1 }).format(v) + '%';
+const fDia = d => { const [y, m, dd] = String(d).slice(0, 10).split('-'); return dd + '/' + m; };
+const fDiaAno = d => { const [y, m, dd] = String(d).slice(0, 10).split('-'); return dd + '/' + m + '/' + y; };
+const fFone = n => { const s = String(n); return s.length === 13 ? '+' + s.slice(0, 2) + ' ' + s.slice(2, 4) + ' ' + s.slice(4, 9) + '-' + s.slice(9) : s; };
+const fMin = m => m == null ? '—' : (m < 60 ? Math.round(m) + ' min' : Math.floor(m / 60) + 'h ' + String(Math.round(m % 60)).padStart(2, '0'));
+const pct = (a, b) => b ? 100 * a / b : 0;
+const N = v => Number(v) || 0;
+const css = n => getComputedStyle(document.documentElement).getPropertyValue(n).trim();
+const SERIES = [{ k: 'envios', nome: 'Envios', cor: '--c1' }, { k: 'entregues', nome: 'Entregues', cor: '--c2' }, { k: 'respondidas', nome: 'Respondidas', cor: '--c3' }];
+let DATA = null, ord = { k: 'data', asc: false };
+
+const el = id => document.getElementById(id);
+const td = (tr, v, cls) => { const c = document.createElement('td'); c.textContent = v; if (cls) c.className = cls; tr.appendChild(c); return c; };
+
+function filtrar() {
+  const ini = el('f-ini').value, fim = el('f-fim').value, num = el('f-num').value;
+  return DATA.rows.filter(r => r.data >= ini && r.data <= fim && (!num || String(r.numero) === num));
+}
+
+function tempoDe(num) {
+  const t = DATA.tempoRetorno;
+  if (!t) return null;
+  if (!num) return t.geralMin;
+  const x = (t.porNumero || []).find(p => String(p.numero) === String(num));
+  return x ? x.mediaMin : null;
+}
+
+function render() {
+  const rows = filtrar();
+  const tot = rows.reduce((a, r) => { a.envios += N(r.envios); a.entregues += N(r.entregues); a.lidas += N(r.lidas); a.respondidas += N(r.respondidas); return a; }, { envios: 0, entregues: 0, lidas: 0, respondidas: 0 });
+  el('k-envios').textContent = fInt.format(tot.envios);
+  el('k-entregues').textContent = fInt.format(tot.entregues);
+  el('k-lidas').textContent = fInt.format(tot.lidas);
+  el('k-resp').textContent = fInt.format(tot.respondidas);
+  el('k-tx-ent').textContent = fPct(pct(tot.entregues, tot.envios));
+  el('k-tx-lid').textContent = fPct(pct(tot.lidas, tot.entregues));
+  el('k-tx-resp').textContent = fPct(pct(tot.respondidas, tot.entregues));
+  const tm = tempoDe(el('f-num').value);
+  el('k-tempo').textContent = DATA.tempoRetorno ? fMin(tm) : '—';
+  el('k-tempo-nota').textContent = DATA.tempoRetorno ? 'Da mensagem do lead até a 1ª resposta do operador' : 'Em configuração';
+  el('lead').textContent = `De ${fDia(el('f-ini').value)} a ${fDia(el('f-fim').value)}: ${fInt.format(tot.envios)} mensagens enviadas, ${fPct(pct(tot.entregues, tot.envios))} entregues e ${fInt.format(tot.respondidas)} leads responderam.`;
+
+  // por dia
+  const m = {};
+  for (const r of rows) { const k = r.data; m[k] = m[k] || { data: k, envios: 0, entregues: 0, respondidas: 0 }; m[k].envios += N(r.envios); m[k].entregues += N(r.entregues); m[k].respondidas += N(r.respondidas); }
+  grafico(Object.values(m).sort((a, b) => a.data.localeCompare(b.data)));
+
+  // por número
+  const pn = {};
+  for (const r of rows) { const k = String(r.numero); pn[k] = pn[k] || { numero: k, vendedor: r.vendedor, envios: 0, entregues: 0, lidas: 0, respondidas: 0 }; pn[k].envios += N(r.envios); pn[k].entregues += N(r.entregues); pn[k].lidas += N(r.lidas); pn[k].respondidas += N(r.respondidas); }
+  const tbN = el('t-num').querySelector('tbody'); tbN.textContent = '';
+  for (const r of Object.values(pn).sort((a, b) => b.envios - a.envios)) {
+    const tr = document.createElement('tr');
+    td(tr, r.vendedor); td(tr, fFone(r.numero)); td(tr, fInt.format(r.envios), 'n'); td(tr, fInt.format(r.entregues), 'n'); td(tr, fPct(pct(r.entregues, r.envios)), 'n');
+    td(tr, fInt.format(r.lidas), 'n'); td(tr, fInt.format(r.respondidas), 'n'); td(tr, fPct(pct(r.respondidas, r.entregues)), 'n'); td(tr, DATA.tempoRetorno ? fMin(tempoDe(r.numero)) : '—', 'n');
+    tbN.appendChild(tr);
+  }
+
+  // detalhe
+  const tbD = el('t-det').querySelector('tbody'); tbD.textContent = '';
+  const num = ['envios', 'entregues', 'lidas', 'respondidas'].includes(ord.k);
+  for (const r of rows.slice().sort((a, b) => { const c = num ? N(a[ord.k]) - N(b[ord.k]) : String(a[ord.k]).localeCompare(String(b[ord.k])); return ord.asc ? c : -c; })) {
+    const tr = document.createElement('tr');
+    td(tr, fDiaAno(r.data)); td(tr, r.vendedor); td(tr, fFone(r.numero)); td(tr, fInt.format(N(r.envios)), 'n'); td(tr, fInt.format(N(r.entregues)), 'n'); td(tr, fInt.format(N(r.lidas)), 'n'); td(tr, fInt.format(N(r.respondidas)), 'n');
+    tbD.appendChild(tr);
+  }
+}
+
+function grafico(rows) {
+  const box = el('chart'); box.textContent = '';
+  const leg = el('legenda'); leg.textContent = '';
+  for (const s of SERIES) { const sp = document.createElement('span'); sp.style.setProperty('--sw', css(s.cor)); sp.textContent = s.nome; leg.appendChild(sp); }
+  if (!rows.length) return;
+  const W = Math.max(320, box.clientWidth || 600), H = 300, mg = { t: 10, r: 10, b: 28, l: 48 };
+  const svg = d3.select(box).append('svg').attr('width', '100%').attr('viewBox', `0 0 ${W} ${H}`);
+  const x0 = d3.scaleBand(rows.map(r => r.data), [mg.l, W - mg.r]).paddingInner(0.25).paddingOuter(0.1);
+  const x1 = d3.scaleBand(SERIES.map(s => s.k), [0, x0.bandwidth()]).padding(0.1);
+  const y = d3.scaleLinear([0, d3.max(rows, r => d3.max(SERIES, s => r[s.k])) || 1], [H - mg.b, mg.t]).nice();
+  svg.append('g').selectAll('line').data(y.ticks(5)).join('line').attr('x1', mg.l).attr('x2', W - mg.r).attr('y1', d => y(d)).attr('y2', d => y(d)).attr('stroke', css('--grid'));
+  const ay = svg.append('g').attr('transform', `translate(${mg.l},0)`).call(d3.axisLeft(y).ticks(5).tickFormat(d => fInt.format(d)).tickSize(0));
+  ay.select('.domain').remove(); ay.selectAll('text').attr('fill', css('--muted')).style('font-size', '11px');
+  const passo = Math.ceil(rows.length / Math.max(1, Math.floor((W - mg.l) / 52)));
+  const ax = svg.append('g').attr('transform', `translate(0,${H - mg.b})`).call(d3.axisBottom(x0).tickFormat((d, i) => i % passo === 0 ? fDia(d) : '').tickSize(0));
+  ax.select('.domain').attr('stroke', css('--line')); ax.selectAll('text').attr('fill', css('--muted')).attr('dy', '1em').style('font-size', '11px');
+  const tip = document.createElement('div'); tip.className = 'tip'; box.appendChild(tip);
+  const g = svg.append('g').selectAll('g').data(rows).join('g').attr('transform', r => `translate(${x0(r.data)},0)`);
+  g.selectAll('rect').data(r => SERIES.map(s => ({ s, v: r[s.k] }))).join('rect')
+    .attr('x', d => x1(d.s.k)).attr('width', Math.min(32, x1.bandwidth())).attr('rx', 3)
+    .attr('y', d => y(d.v)).attr('height', d => Math.max(0, y(0) - y(d.v))).attr('fill', d => css(d.s.cor));
+  g.append('rect').attr('width', x0.bandwidth()).attr('y', mg.t).attr('height', H - mg.t - mg.b).attr('fill', 'transparent')
+    .on('mousemove', function (ev, r) {
+      tip.textContent = '';
+      const t = document.createElement('div'); t.className = 't'; t.textContent = fDiaAno(r.data); tip.appendChild(t);
+      for (const s of SERIES) { const l = document.createElement('div'); l.textContent = s.nome + ': ' + fInt.format(r[s.k]); l.style.borderLeft = '3px solid ' + css(s.cor); l.style.paddingLeft = '6px'; tip.appendChild(l); }
+      tip.style.display = 'block';
+      const [px, py] = d3.pointer(ev, box);
+      tip.style.left = Math.min(Math.max(0, px + 12), box.clientWidth - tip.offsetWidth) + 'px';
+      tip.style.top = Math.max(0, py - 10) + 'px';
+    })
+    .on('mouseleave', () => { tip.style.display = 'none'; });
+}
+
+function status() {
+  const tb = el('t-status').querySelector('tbody'); tb.textContent = '';
+  for (const s of DATA.status) {
+    const tr = document.createElement('tr');
+    td(tr, s.vendedor); td(tr, fFone(s.numero));
+    td(tr, s.qualidade, s.qualidade === 'GREEN' ? 'ok' : s.qualidade === 'YELLOW' ? 'warn' : s.qualidade === 'RED' ? 'bad' : '');
+    td(tr, s.status, s.status === 'CONNECTED' ? 'ok' : 'bad');
+    td(tr, s.limite || ''); td(tr, s.nome_exibicao || ''); td(tr, s.status_nome || '');
+    tb.appendChild(tr);
+  }
+}
+
+fetch('data.json?v=' + Date.now()).then(r => r.json()).then(d => {
+  DATA = d;
+  const dias = Array.from(new Set(d.rows.map(r => r.data))).sort();
+  for (const id of ['f-ini', 'f-fim']) for (const dia of dias) { const o = document.createElement('option'); o.value = dia; o.textContent = fDiaAno(dia); el(id).appendChild(o); }
+  el('f-ini').value = dias[0]; el('f-fim').value = dias[dias.length - 1];
+  for (const s of d.status) { const o = document.createElement('option'); o.value = String(s.numero); o.textContent = s.vendedor + ' (' + fFone(s.numero) + ')'; el('f-num').appendChild(o); }
+  el('upd').textContent = 'Atualizado em ' + new Date(d.geradoEm).toLocaleString('pt-BR', { timeZone: 'America/Sao_Paulo' });
+  for (const id of ['f-ini', 'f-fim', 'f-num']) el(id).addEventListener('change', () => { if (el('f-ini').value > el('f-fim').value) el('f-fim').value = el('f-ini').value; render(); });
+  el('t-det').querySelectorAll('th').forEach(th => th.addEventListener('click', () => { const k = th.dataset.k; ord = { k, asc: ord.k === k ? !ord.asc : false }; render(); }));
+  status(); render();
+  window.addEventListener('resize', () => render());
+}).catch(() => { el('lead').textContent = 'Não foi possível carregar os dados.'; });
+</script>
+</body>
+</html>

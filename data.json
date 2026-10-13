@@ -1,0 +1,450 @@
+{
+ "geradoEm": "2026-10-13T16:50:49.204Z",
+ "rows": [
+  {
+   "data": "2026-10-05",
+   "numero": "5521968566838",
+   "vendedor": "Camila Menezes",
+   "envios": 8,
+   "entregues": 8,
+   "lidas": 3,
+   "respondidas": 2
+  },
+  {
+   "data": "2026-10-05",
+   "numero": "5521968950069",
+   "vendedor": "Caroline Oliveira",
+   "envios": 1,
+   "entregues": 1,
+   "lidas": 0,
+   "respondidas": 24
+  },
+  {
+   "data": "2026-10-05",
+   "numero": "5521990860631",
+   "vendedor": "Marlon Matos",
+   "envios": 10,
+   "entregues": 10,
+   "lidas": 7,
+   "respondidas": 5
+  },
+  {
+   "data": "2026-10-05",
+   "numero": "5521966618116",
+   "vendedor": "Rafael Reis",
+   "envios": 2,
+   "entregues": 2,
+   "lidas": 1,
+   "respondidas": 7
+  },
+  {
+   "data": "2026-10-05",
+   "numero": "5521976164516",
+   "vendedor": "Vitor Espinola",
+   "envios": 168,
+   "entregues": 157,
+   "lidas": 90,
+   "respondidas": 40
+  },
+  {
+   "data": "2026-10-06",
+   "numero": "5521968566838",
+   "vendedor": "Camila Menezes",
+   "envios": 233,
+   "entregues": 223,
+   "lidas": 130,
+   "respondidas": 40
+  },
+  {
+   "data": "2026-10-06",
+   "numero": "5521968950069",
+   "vendedor": "Caroline Oliveira",
+   "envios": 230,
+   "entregues": 225,
+   "lidas": 139,
+   "respondidas": 28
+  },
+  {
+   "data": "2026-10-06",
+   "numero": "5521990860631",
+   "vendedor": "Marlon Matos",
+   "envios": 208,
+   "entregues": 198,
+   "lidas": 124,
+   "respondidas": 32
+  },
+  {
+   "data": "2026-10-06",
+   "numero": "5521966618116",
+   "vendedor": "Rafael Reis",
+   "envios": 231,
+   "entregues": 222,
+   "lidas": 136,
+   "respondidas": 26
+  },
+  {
+   "data": "2026-10-06",
+   "numero": "5521976164516",
+   "vendedor": "Vitor Espinola",
+   "envios": 201,
+   "entregues": 190,
+   "lidas": 129,
+   "respondidas": 35
+  },
+  {
+   "data": "2026-10-07",
+   "numero": "5521968566838",
+   "vendedor": "Camila Menezes",
+   "envios": 2,
+   "entregues": 5,
+   "lidas": 12,
+   "respondidas": 1
+  },
+  {
+   "data": "2026-10-07",
+   "numero": "5521968950069",
+   "vendedor": "Caroline Oliveira",
+   "envios": 205,
+   "entregues": 197,
+   "lidas": 122,
+   "respondidas": 29
+  },
+  {
+   "data": "2026-10-07",
+   "numero": "5521990860631",
+   "vendedor": "Marlon Matos",
+   "envios": 246,
+   "entregues": 231,
+   "lidas": 153,
+   "respondidas": 46
+  },
+  {
+   "data": "2026-10-07",
+   "numero": "5521966618116",
+   "vendedor": "Rafael Reis",
+   "envios": 238,
+   "entregues": 218,
+   "lidas": 134,
+   "respondidas": 32
+  },
+  {
+   "data": "2026-10-07",
+   "numero": "5521976164516",
+   "vendedor": "Vitor Espinola",
+   "envios": 206,
+   "entregues": 192,
+   "lidas": 124,
+   "respondidas": 25
+  },
+  {
+   "data": "2026-10-08",
+   "numero": "5521968566838",
+   "vendedor": "Camila Menezes",
+   "envios": 0,
+   "entregues": 1,
+   "lidas": 6,
+   "respondidas": 1
+  },
+  {
+   "data": "2026-10-08",
+   "numero": "5521968950069",
+   "vendedor": "Caroline Oliveira",
+   "envios": 230,
+   "entregues": 209,
+   "lidas": 143,
+   "respondidas": 37
+  },
+  {
+   "data": "2026-10-08",
+   "numero": "5521990860631",
+   "vendedor": "Marlon Matos",
+   "envios": 116,
+   "entregues": 106,
+   "lidas": 77,
+   "respondidas": 20
+  },
+  {
+   "data": "2026-10-08",
+   "numero": "5521966618116",
+   "vendedor": "Rafael Reis",
+   "envios": 202,
+   "entregues": 182,
+   "lidas": 128,
+   "respondidas": 36
+  },
+  {
+   "data": "2026-10-08",
+   "numero": "5521976164516",
+   "vendedor": "Vitor Espinola",
+   "envios": 1,
+   "entregues": 4,
+   "lidas": 9,
+   "respondidas": 1
+  },
+  {
+   "data": "2026-10-09",
+   "numero": "5521968950069",
+   "vendedor": "Caroline Oliveira",
+   "envios": 111,
+   "entregues": 104,
+   "lidas": 66,
+   "respondidas": 17
+  },
+  {
+   "data": "2026-10-09",
+   "numero": "5521990860631",
+   "vendedor": "Marlon Matos",
+   "envios": 69,
+   "entregues": 64,
+   "lidas": 46,
+   "respondidas": 10
+  },
+  {
+   "data": "2026-10-09",
+   "numero": "5521966618116",
+   "vendedor": "Rafael Reis",
+   "envios": 12,
+   "entregues": 14,
+   "lidas": 15,
+   "respondidas": 3
+  },
+  {
+   "data": "2026-10-09",
+   "numero": "5521976164516",
+   "vendedor": "Vitor Espinola",
+   "envios": 7,
+   "entregues": 7,
+   "lidas": 9,
+   "respondidas": 4
+  },
+  {
+   "data": "2026-10-10",
+   "numero": "5521968566838",
+   "vendedor": "Camila Menezes",
+   "envios": 0,
+   "entregues": 0,
+   "lidas": 1,
+   "respondidas": 0
+  },
+  {
+   "data": "2026-10-10",
+   "numero": "5521968950069",
+   "vendedor": "Caroline Oliveira",
+   "envios": 0,
+   "entregues": 2,
+   "lidas": 7,
+   "respondidas": 3
+  },
+  {
+   "data": "2026-10-10",
+   "numero": "5521990860631",
+   "vendedor": "Marlon Matos",
+   "envios": 0,
+   "entregues": 2,
+   "lidas": 3,
+   "respondidas": 0
+  },
+  {
+   "data": "2026-10-10",
+   "numero": "5521966618116",
+   "vendedor": "Rafael Reis",
+   "envios": 0,
+   "entregues": 3,
+   "lidas": 1,
+   "respondidas": 1
+  },
+  {
+   "data": "2026-10-10",
+   "numero": "5521976164516",
+   "vendedor": "Vitor Espinola",
+   "envios": 0,
+   "entregues": 0,
+   "lidas": 4,
+   "respondidas": 0
+  },
+  {
+   "data": "2026-10-11",
+   "numero": "5521968566838",
+   "vendedor": "Camila Menezes",
+   "envios": 0,
+   "entregues": 0,
+   "lidas": 1,
+   "respondidas": 0
+  },
+  {
+   "data": "2026-10-11",
+   "numero": "5521968950069",
+   "vendedor": "Caroline Oliveira",
+   "envios": 0,
+   "entregues": 0,
+   "lidas": 3,
+   "respondidas": 0
+  },
+  {
+   "data": "2026-10-11",
+   "numero": "5521990860631",
+   "vendedor": "Marlon Matos",
+   "envios": 0,
+   "entregues": 0,
+   "lidas": 3,
+   "respondidas": 1
+  },
+  {
+   "data": "2026-10-11",
+   "numero": "5521966618116",
+   "vendedor": "Rafael Reis",
+   "envios": 0,
+   "entregues": 1,
+   "lidas": 3,
+   "respondidas": 0
+  },
+  {
+   "data": "2026-10-11",
+   "numero": "5521976164516",
+   "vendedor": "Vitor Espinola",
+   "envios": 0,
+   "entregues": 1,
+   "lidas": 0,
+   "respondidas": 0
+  },
+  {
+   "data": "2026-10-12",
+   "numero": "5521968566838",
+   "vendedor": "Camila Menezes",
+   "envios": 0,
+   "entregues": 0,
+   "lidas": 1,
+   "respondidas": 0
+  },
+  {
+   "data": "2026-10-12",
+   "numero": "5521968950069",
+   "vendedor": "Caroline Oliveira",
+   "envios": 0,
+   "entregues": 0,
+   "lidas": 2,
+   "respondidas": 0
+  },
+  {
+   "data": "2026-10-12",
+   "numero": "5521990860631",
+   "vendedor": "Marlon Matos",
+   "envios": 0,
+   "entregues": 0,
+   "lidas": 3,
+   "respondidas": 1
+  },
+  {
+   "data": "2026-10-12",
+   "numero": "5521966618116",
+   "vendedor": "Rafael Reis",
+   "envios": 0,
+   "entregues": 0,
+   "lidas": 1,
+   "respondidas": 0
+  },
+  {
+   "data": "2026-10-12",
+   "numero": "5521976164516",
+   "vendedor": "Vitor Espinola",
+   "envios": 0,
+   "entregues": 0,
+   "lidas": 2,
+   "respondidas": 1
+  },
+  {
+   "data": "2026-10-13",
+   "numero": "5521968566838",
+   "vendedor": "Camila Menezes",
+   "envios": 0,
+   "entregues": 0,
+   "lidas": 1,
+   "respondidas": 0
+  },
+  {
+   "data": "2026-10-13",
+   "numero": "5521968950069",
+   "vendedor": "Caroline Oliveira",
+   "envios": 14,
+   "entregues": 14,
+   "lidas": 5,
+   "respondidas": 2
+  },
+  {
+   "data": "2026-10-13",
+   "numero": "5521990860631",
+   "vendedor": "Marlon Matos",
+   "envios": 17,
+   "entregues": 17,
+   "lidas": 13,
+   "respondidas": 3
+  },
+  {
+   "data": "2026-10-13",
+   "numero": "5521966618116",
+   "vendedor": "Rafael Reis",
+   "envios": 24,
+   "entregues": 19,
+   "lidas": 9,
+   "respondidas": 2
+  },
+  {
+   "data": "2026-10-13",
+   "numero": "5521976164516",
+   "vendedor": "Vitor Espinola",
+   "envios": 266,
+   "entregues": 227,
+   "lidas": 104,
+   "respondidas": 26
+  }
+ ],
+ "status": [
+  {
+   "numero": "5521968950069",
+   "vendedor": "Caroline Oliveira",
+   "qualidade": "RED",
+   "status": "CONNECTED",
+   "limite": "TIER_2K",
+   "nome_exibicao": "Caroline Oliveira",
+   "status_nome": "PENDING_REVIEW"
+  },
+  {
+   "numero": "5521968566838",
+   "vendedor": "Camila Menezes",
+   "qualidade": "GREEN",
+   "status": "CONNECTED",
+   "limite": "TIER_2K",
+   "nome_exibicao": "Camila Menezes",
+   "status_nome": "DECLINED"
+  },
+  {
+   "numero": "5521990860631",
+   "vendedor": "Marlon Matos",
+   "qualidade": "RED",
+   "status": "CONNECTED",
+   "limite": "TIER_2K",
+   "nome_exibicao": "Marlon Matos",
+   "status_nome": "PENDING_REVIEW"
+  },
+  {
+   "numero": "5521976164516",
+   "vendedor": "Vitor Espinola",
+   "qualidade": "GREEN",
+   "status": "CONNECTED",
+   "limite": "TIER_2K",
+   "nome_exibicao": "Vitor Espinola",
+   "status_nome": "DECLINED"
+  },
+  {
+   "numero": "5521966618116",
+   "vendedor": "Rafael Reis",
+   "qualidade": "GREEN",
+   "status": "CONNECTED",
+   "limite": "TIER_2K",
+   "nome_exibicao": "Rafael Reis",
+   "status_nome": "PENDING_REVIEW"
+  }
+ ],
+ "tempoRetorno": null,
+ "avisos": []
+}
