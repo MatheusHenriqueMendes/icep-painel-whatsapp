@@ -1,6 +1,6 @@
 // Atualiza o data.json do painel: Meta (templates da régua + saúde dos números) e Bitrix24 (respostas no Canal Aberto).
 // Roda no GitHub Actions. Segredos: META_TOKEN e BITRIX_WEBHOOK (variáveis de ambiente).
-import { writeFileSync } from 'node:fs';
+import { writeFileSync, readFileSync, existsSync } from 'node:fs';
 
 const META_TOKEN = process.env.META_TOKEN;
 const BX = process.env.BITRIX_WEBHOOK; // ex.: https://icephub.bitrix24.com.br/rest/10/xxxxx/
@@ -84,9 +84,26 @@ for (let p = 0; p < 400; p++) {
   start = r.next; await sleep(500);
 }
 
+// Envios: a contagem do próprio fluxo de disparo (envios.json, publicado pelo fluxo a cada 15 min) substitui
+// a da Meta nos dias em que existe, porque as estatísticas da Meta chegam com horas de atraso.
+let fonteEnvios = 'meta';
+if (existsSync('envios.json')) {
+  try {
+    const env = JSON.parse(readFileSync('envios.json', 'utf8'));
+    const dias = new Set((env.rows || []).map(r => r.data));
+    for (const l of Object.values(linhas)) if (dias.has(l.data)) { l.envios = 0; l.falhas = 0; }
+    for (const r of (env.rows || [])) {
+      const op = OPS.find(o => o.numero === String(r.numero)) || { numero: String(r.numero), vendedor: r.vendedor };
+      const l = linha(r.data, op);
+      l.envios = Number(r.envios) || 0; l.falhas = Number(r.falhas) || 0;
+    }
+    fonteEnvios = 'fluxo';
+  } catch (e) { avisos.push('envios.json: ' + e.message); }
+}
+
 const rows = Object.values(linhas).filter(l => l.envios || l.entregues || l.lidas || l.respondidas)
   .sort((a, b) => a.data.localeCompare(b.data) || a.vendedor.localeCompare(b.vendedor));
-const saida = { geradoEm: new Date().toISOString(), rows, status, tempoRetorno: null, avisos };
+const saida = { geradoEm: new Date().toISOString(), fonteEnvios, rows, status, tempoRetorno: null, avisos };
 writeFileSync('data.json', JSON.stringify(saida, null, 1));
 console.log(`data.json: ${rows.length} linhas, ${status.length} números, ${avisos.length} avisos.`);
 if (avisos.length) console.log(avisos.join('\n'));
