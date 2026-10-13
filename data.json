@@ -1,5 +1,6 @@
 {
- "geradoEm": "2026-10-13T17:13:12.461Z",
+ "geradoEm": "2026-10-13T17:29:45.395Z",
+ "fonteEnvios": "fluxo",
  "rows": [
   {
    "data": "2026-10-05",
@@ -356,53 +357,58 @@
    "data": "2026-10-13",
    "numero": "5521968566838",
    "vendedor": "Camila Menezes",
-   "envios": 0,
+   "envios": 722,
    "entregues": 0,
    "lidas": 1,
-   "respondidas": 0
+   "respondidas": 0,
+   "falhas": 0
   },
   {
    "data": "2026-10-13",
    "numero": "5521968950069",
    "vendedor": "Caroline Oliveira",
-   "envios": 17,
-   "entregues": 16,
-   "lidas": 5,
-   "respondidas": 2
+   "envios": 39,
+   "entregues": 18,
+   "lidas": 7,
+   "respondidas": 2,
+   "falhas": 0
   },
   {
    "data": "2026-10-13",
    "numero": "5521990860631",
    "vendedor": "Marlon Matos",
-   "envios": 18,
+   "envios": 39,
    "entregues": 18,
-   "lidas": 13,
-   "respondidas": 3
+   "lidas": 15,
+   "respondidas": 3,
+   "falhas": 0
   },
   {
    "data": "2026-10-13",
    "numero": "5521966618116",
    "vendedor": "Rafael Reis",
-   "envios": 32,
-   "entregues": 26,
-   "lidas": 13,
-   "respondidas": 4
+   "envios": 82,
+   "entregues": 32,
+   "lidas": 14,
+   "respondidas": 5,
+   "falhas": 0
   },
   {
    "data": "2026-10-13",
    "numero": "5521976164516",
    "vendedor": "Vitor Espinola",
-   "envios": 273,
-   "entregues": 233,
-   "lidas": 111,
-   "respondidas": 26
+   "envios": 615,
+   "entregues": 238,
+   "lidas": 112,
+   "respondidas": 27,
+   "falhas": 0
   }
  ],
  "status": [
   {
    "numero": "5521968950069",
    "vendedor": "Caroline Oliveira",
-   "qualidade": "RED",
+   "qualidade": "GREEN",
    "status": "CONNECTED",
    "limite": "TIER_2K",
    "nome_exibicao": "Caroline Oliveira",
