@@ -10,7 +10,8 @@ const G = 'https://graph.facebook.com/v23.0/';
 const INICIO = '2026-10-05';
 const OPS = [
   { vendedor: 'Caroline Oliveira', userId: 730, numero: '5521968950069', waba: '1823835488614892' },
-  { vendedor: 'Camila Menezes', userId: 666, numero: '5521968566838', waba: '1073858668600531' },
+  // 13/10/2026: número da Camila Menezes (666) transferido para Gabriel Moreira (2638); respostas dos dois IDs contam para o número
+  { vendedor: 'Gabriel Moreira', userId: 2638, userIdsExtras: [666], numero: '5521968566838', waba: '1073858668600531' },
   { vendedor: 'Marlon Matos', userId: 270, numero: '5521990860631', waba: '2939549596392485' },
   { vendedor: 'Vitor Espinola', userId: 668, numero: '5521976164516', waba: '1161584776580207' },
   { vendedor: 'Rafael Reis', userId: 292, numero: '5521966618116', waba: '1649127593490122' }
@@ -72,7 +73,8 @@ for (const op of OPS) {
 }
 
 // Respondidas: conversas de Canal Aberto abertas pelo lead, por vendedor responsável
-const porUser = Object.fromEntries(OPS.map(o => [String(o.userId), o]));
+const porUser = {};
+for (const o of OPS) for (const u of [o.userId, ...(o.userIdsExtras || [])]) porUser[String(u)] = o;
 let start = 0;
 for (let p = 0; p < 400; p++) {
   const r = await bitrix('crm.activity.list', { filter: { PROVIDER_ID: 'IMOPENLINES_SESSION', '>=CREATED': INICIO + 'T00:00:00' }, select: ['ID', 'CREATED', 'RESPONSIBLE_ID'], order: { ID: 'ASC' }, start });
@@ -93,7 +95,7 @@ if (existsSync('envios.json')) {
     const dias = new Set((env.rows || []).map(r => r.data));
     for (const l of Object.values(linhas)) if (dias.has(l.data)) { l.envios = 0; l.falhas = 0; }
     for (const r of (env.rows || [])) {
-      const op = OPS.find(o => o.numero === String(r.numero)) || { numero: String(r.numero), vendedor: r.vendedor };
+      const op = OPS.find(o => o.numero === String(r.numero)) || { numero: String(r.numero), vendedor: r.vendedor }; // nome atual do dono do número
       const l = linha(r.data, op);
       l.envios = Number(r.envios) || 0; l.falhas = Number(r.falhas) || 0;
     }
