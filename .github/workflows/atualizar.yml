@@ -2,9 +2,8 @@ name: Atualizar painel
 
 on:
   schedule:
-    # Dias úteis às 07h00 e 18h15 (horário de Brasília = UTC-3)
-    - cron: '0 10 * * 1-5'
-    - cron: '15 21 * * 1-5'
+    # A cada 1 hora, todos os dias (no minuto 7 de cada hora, para fugir do pico do GitHub no minuto 0)
+    - cron: '7 * * * *'
   workflow_dispatch: {}
 
 permissions:

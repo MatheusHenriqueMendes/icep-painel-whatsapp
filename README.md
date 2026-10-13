@@ -3,7 +3,7 @@
 Painel estático (GitHub Pages) com os resultados da régua de WhatsApp do funil 0 (Bitrix24 ICEP HUB).
 
 - `index.html`: o painel. Lê o `data.json` do próprio repositório.
-- `data.json`: dados atualizados automaticamente pelo GitHub Actions (`.github/workflows/atualizar.yml`), em dias úteis às 7h e às 18h15 (Brasília). O script é `scripts/atualizar.mjs`.
+- `data.json`: dados atualizados automaticamente pelo GitHub Actions (`.github/workflows/atualizar.yml`), a cada 1 hora. O script é `scripts/atualizar.mjs`.
 - Segredos do repositório (Settings → Secrets and variables → Actions): `META_TOKEN` (token do usuário do sistema da Meta) e `BITRIX_WEBHOOK` (URL do webhook de entrada do Bitrix24).
 - Atualização manual: aba Actions → Atualizar painel → Run workflow.
 
