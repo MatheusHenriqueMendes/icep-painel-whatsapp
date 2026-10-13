@@ -1,0 +1,41 @@
+{
+ "geradoEm": "2026-10-13T17:28:24.955Z",
+ "fonte": "fluxo de disparo",
+ "rows": [
+  {
+   "data": "2026-10-13",
+   "numero": "5521968950069",
+   "vendedor": "Caroline Oliveira",
+   "envios": 39,
+   "falhas": 0
+  },
+  {
+   "data": "2026-10-13",
+   "numero": "5521968566838",
+   "vendedor": "Camila Menezes",
+   "envios": 722,
+   "falhas": 0
+  },
+  {
+   "data": "2026-10-13",
+   "numero": "5521990860631",
+   "vendedor": "Marlon Matos",
+   "envios": 39,
+   "falhas": 0
+  },
+  {
+   "data": "2026-10-13",
+   "numero": "5521976164516",
+   "vendedor": "Vitor Espinola",
+   "envios": 615,
+   "falhas": 0
+  },
+  {
+   "data": "2026-10-13",
+   "numero": "5521966618116",
+   "vendedor": "Rafael Reis",
+   "envios": 82,
+   "falhas": 0
+  }
+ ]
+}
