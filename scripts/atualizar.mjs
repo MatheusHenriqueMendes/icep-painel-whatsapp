@@ -8,6 +8,8 @@ if (!META_TOKEN || !BX) { console.error('Faltam os segredos META_TOKEN e/ou BITR
 
 const G = 'https://graph.facebook.com/v23.0/';
 const INICIO = '2026-10-05';
+// O cliente só vê dados a partir desta data (dias anteriores não entram no data.json publicado)
+const INICIO_PAINEL = '2026-10-13';
 const OPS = [
   { vendedor: 'Caroline Oliveira', userId: 730, numero: '5521968950069', waba: '1823835488614892' },
   // 13/10/2026: número da Camila Menezes (666) transferido para Gabriel Moreira (2638); respostas dos dois IDs contam para o número
@@ -103,7 +105,7 @@ if (existsSync('envios.json')) {
   } catch (e) { avisos.push('envios.json: ' + e.message); }
 }
 
-const rows = Object.values(linhas).filter(l => l.envios || l.entregues || l.lidas || l.respondidas)
+const rows = Object.values(linhas).filter(l => l.data >= INICIO_PAINEL && (l.envios || l.entregues || l.lidas || l.respondidas))
   .sort((a, b) => a.data.localeCompare(b.data) || a.vendedor.localeCompare(b.vendedor));
 const saida = { geradoEm: new Date().toISOString(), fonteEnvios, rows, status, tempoRetorno: null, avisos };
 writeFileSync('data.json', JSON.stringify(saida, null, 1));
