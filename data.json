@@ -1,5 +1,5 @@
 {
- "geradoEm": "2026-10-14T17:18:42.332Z",
+ "geradoEm": "2026-10-14T17:33:46.479Z",
  "fonteEnvios": "fluxo",
  "rows": [
   {
@@ -56,7 +56,7 @@
    "data": "2026-10-14",
    "numero": "5521968950069",
    "vendedor": "Caroline Oliveira",
-   "envios": 244,
+   "envios": 245,
    "entregues": 106,
    "lidas": 59,
    "respondidas": 16,
@@ -66,19 +66,19 @@
    "data": "2026-10-14",
    "numero": "5521968566838",
    "vendedor": "Gabriel Moreira",
-   "envios": 434,
-   "entregues": 137,
-   "lidas": 62,
-   "respondidas": 28,
+   "envios": 469,
+   "entregues": 157,
+   "lidas": 76,
+   "respondidas": 30,
    "falhas": 0
   },
   {
    "data": "2026-10-14",
    "numero": "5521990860631",
    "vendedor": "Marlon Matos",
-   "envios": 245,
-   "entregues": 117,
-   "lidas": 63,
+   "envios": 265,
+   "entregues": 120,
+   "lidas": 64,
    "respondidas": 15,
    "falhas": 0
   },
@@ -86,9 +86,9 @@
    "data": "2026-10-14",
    "numero": "5521966618116",
    "vendedor": "Rafael Reis",
-   "envios": 245,
+   "envios": 246,
    "entregues": 121,
-   "lidas": 64,
+   "lidas": 65,
    "respondidas": 11,
    "falhas": 0
   },
@@ -125,7 +125,7 @@
   {
    "numero": "5521990860631",
    "vendedor": "Marlon Matos",
-   "qualidade": "RED",
+   "qualidade": "GREEN",
    "status": "CONNECTED",
    "limite": "TIER_2K",
    "nome_exibicao": "Marlon Matos",
