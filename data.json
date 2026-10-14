@@ -1,5 +1,5 @@
 {
- "geradoEm": "2026-10-14T14:26:44.287Z",
+ "geradoEm": "2026-10-14T14:42:44.578Z",
  "fonteEnvios": "fluxo",
  "rows": [
   {
@@ -56,29 +56,29 @@
    "data": "2026-10-14",
    "numero": "5521968950069",
    "vendedor": "Caroline Oliveira",
-   "envios": 203,
-   "entregues": 75,
-   "lidas": 40,
-   "respondidas": 11,
+   "envios": 219,
+   "entregues": 85,
+   "lidas": 44,
+   "respondidas": 12,
    "falhas": 0
   },
   {
    "data": "2026-10-14",
    "numero": "5521990860631",
    "vendedor": "Marlon Matos",
-   "envios": 204,
-   "entregues": 74,
-   "lidas": 32,
-   "respondidas": 10,
+   "envios": 220,
+   "entregues": 82,
+   "lidas": 38,
+   "respondidas": 11,
    "falhas": 0
   },
   {
    "data": "2026-10-14",
    "numero": "5521966618116",
    "vendedor": "Rafael Reis",
-   "envios": 204,
-   "entregues": 82,
-   "lidas": 41,
+   "envios": 220,
+   "entregues": 91,
+   "lidas": 44,
    "respondidas": 9,
    "falhas": 0
   },
@@ -86,10 +86,10 @@
    "data": "2026-10-14",
    "numero": "5521976164516",
    "vendedor": "Vitor Espinola",
-   "envios": 204,
-   "entregues": 54,
-   "lidas": 16,
-   "respondidas": 9,
+   "envios": 220,
+   "entregues": 55,
+   "lidas": 18,
+   "respondidas": 11,
    "falhas": 0
   }
  ],
