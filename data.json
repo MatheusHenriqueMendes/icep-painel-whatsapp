@@ -1,5 +1,5 @@
 {
- "geradoEm": "2026-10-14T19:55:39.359Z",
+ "geradoEm": "2026-10-14T20:11:42.836Z",
  "fonteEnvios": "fluxo",
  "rows": [
   {
@@ -57,7 +57,7 @@
    "numero": "5521968950069",
    "vendedor": "Caroline Oliveira",
    "envios": 257,
-   "entregues": 112,
+   "entregues": 113,
    "lidas": 63,
    "respondidas": 15,
    "falhas": 0
@@ -68,7 +68,7 @@
    "vendedor": "Gabriel Moreira",
    "envios": 592,
    "entregues": 223,
-   "lidas": 121,
+   "lidas": 125,
    "respondidas": 51,
    "falhas": 0
   },
@@ -88,7 +88,7 @@
    "vendedor": "Marlon Matos",
    "envios": 348,
    "entregues": 170,
-   "lidas": 93,
+   "lidas": 94,
    "respondidas": 16,
    "falhas": 0
   },
@@ -97,9 +97,9 @@
    "numero": "5521966618116",
    "vendedor": "Rafael Reis",
    "envios": 258,
-   "entregues": 126,
+   "entregues": 127,
    "lidas": 69,
-   "respondidas": 12,
+   "respondidas": 13,
    "falhas": 0
   },
   {
