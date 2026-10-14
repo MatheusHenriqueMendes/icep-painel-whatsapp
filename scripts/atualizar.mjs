@@ -16,7 +16,8 @@ const OPS = [
   { vendedor: 'Gabriel Moreira', userId: 2638, userIdsExtras: [666], numero: '5521968566838', waba: '1073858668600531' },
   { vendedor: 'Marlon Matos', userId: 270, numero: '5521990860631', waba: '2939549596392485' },
   { vendedor: 'Vitor Espinola', userId: 668, numero: '5521976164516', waba: '1161584776580207' },
-  { vendedor: 'Rafael Reis', userId: 292, numero: '5521966618116', waba: '1649127593490122' }
+  { vendedor: 'Rafael Reis', userId: 292, numero: '5521966618116', waba: '1649127593490122' },
+  { vendedor: 'João Gomes', userId: 2854, numero: '5521990853689', waba: '1898025354914977' }
 ];
 
 const sleep = ms => new Promise(r => setTimeout(r, ms));
