@@ -1,5 +1,5 @@
 {
- "geradoEm": "2026-10-14T11:48:10.829Z",
+ "geradoEm": "2026-10-14T12:04:12.780Z",
  "fonte": "fluxo de disparo",
  "rows": [
   {
@@ -46,7 +46,7 @@
    "data": "2026-10-14",
    "numero": "5521990860631",
    "vendedor": "Marlon Matos",
-   "envios": 46,
+   "envios": 62,
    "falhas": 0,
    "descartados": 0
   },
@@ -54,7 +54,7 @@
    "data": "2026-10-14",
    "numero": "5521966618116",
    "vendedor": "Rafael Reis",
-   "envios": 46,
+   "envios": 62,
    "falhas": 0,
    "descartados": 0
   },
@@ -62,7 +62,7 @@
    "data": "2026-10-14",
    "numero": "5521976164516",
    "vendedor": "Vitor Espinola",
-   "envios": 46,
+   "envios": 62,
    "falhas": 0,
    "descartados": 0
   },
@@ -70,7 +70,7 @@
    "data": "2026-10-14",
    "numero": "5521968950069",
    "vendedor": "Caroline Oliveira",
-   "envios": 46,
+   "envios": 62,
    "falhas": 0,
    "descartados": 0
   }
