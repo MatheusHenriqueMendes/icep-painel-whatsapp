@@ -1,5 +1,5 @@
 {
- "geradoEm": "2026-10-14T20:58:54.972Z",
+ "geradoEm": "2026-10-14T22:15:07.416Z",
  "fonteEnvios": "fluxo",
  "rows": [
   {
@@ -57,8 +57,8 @@
    "numero": "5521968950069",
    "vendedor": "Caroline Oliveira",
    "envios": 277,
-   "entregues": 117,
-   "lidas": 66,
+   "entregues": 119,
+   "lidas": 69,
    "respondidas": 16,
    "falhas": 0
   },
@@ -67,9 +67,9 @@
    "numero": "5521968566838",
    "vendedor": "Gabriel Moreira",
    "envios": 656,
-   "entregues": 238,
-   "lidas": 130,
-   "respondidas": 54,
+   "entregues": 254,
+   "lidas": 148,
+   "respondidas": 56,
    "falhas": 0
   },
   {
@@ -77,9 +77,9 @@
    "numero": "5521990853689",
    "vendedor": "João Gomes",
    "envios": 165,
-   "entregues": 58,
-   "lidas": 23,
-   "respondidas": 13,
+   "entregues": 72,
+   "lidas": 33,
+   "respondidas": 14,
    "falhas": 0
   },
   {
@@ -87,8 +87,8 @@
    "numero": "5521990860631",
    "vendedor": "Marlon Matos",
    "envios": 368,
-   "entregues": 176,
-   "lidas": 97,
+   "entregues": 179,
+   "lidas": 101,
    "respondidas": 17,
    "falhas": 0
   },
@@ -97,8 +97,8 @@
    "numero": "5521966618116",
    "vendedor": "Rafael Reis",
    "envios": 278,
-   "entregues": 133,
-   "lidas": 73,
+   "entregues": 137,
+   "lidas": 78,
    "respondidas": 13,
    "falhas": 0
   },
@@ -108,7 +108,7 @@
    "vendedor": "Vitor Espinola",
    "envios": 244,
    "entregues": 79,
-   "lidas": 46,
+   "lidas": 50,
    "respondidas": 14,
    "falhas": 0
   }
@@ -135,7 +135,7 @@
   {
    "numero": "5521990860631",
    "vendedor": "Marlon Matos",
-   "qualidade": "RED",
+   "qualidade": "GREEN",
    "status": "CONNECTED",
    "limite": "TIER_2K",
    "nome_exibicao": "Marlon Matos",
