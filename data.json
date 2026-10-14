@@ -1,5 +1,5 @@
 {
- "geradoEm": "2026-10-14T18:04:51.667Z",
+ "geradoEm": "2026-10-14T18:20:58.612Z",
  "fonteEnvios": "fluxo",
  "rows": [
   {
@@ -56,9 +56,9 @@
    "data": "2026-10-14",
    "numero": "5521968950069",
    "vendedor": "Caroline Oliveira",
-   "envios": 249,
-   "entregues": 108,
-   "lidas": 60,
+   "envios": 250,
+   "entregues": 109,
+   "lidas": 61,
    "respondidas": 15,
    "falhas": 0
   },
@@ -66,19 +66,29 @@
    "data": "2026-10-14",
    "numero": "5521968566838",
    "vendedor": "Gabriel Moreira",
-   "envios": 526,
-   "entregues": 183,
-   "lidas": 89,
-   "respondidas": 35,
+   "envios": 537,
+   "entregues": 191,
+   "lidas": 96,
+   "respondidas": 39,
+   "falhas": 0
+  },
+  {
+   "data": "2026-10-14",
+   "numero": "5521990853689",
+   "vendedor": "João Gomes",
+   "envios": 11,
+   "entregues": 2,
+   "lidas": 0,
+   "respondidas": 2,
    "falhas": 0
   },
   {
    "data": "2026-10-14",
    "numero": "5521990860631",
    "vendedor": "Marlon Matos",
-   "envios": 325,
-   "entregues": 146,
-   "lidas": 72,
+   "envios": 338,
+   "entregues": 158,
+   "lidas": 76,
    "respondidas": 16,
    "falhas": 0
   },
@@ -86,8 +96,8 @@
    "data": "2026-10-14",
    "numero": "5521966618116",
    "vendedor": "Rafael Reis",
-   "envios": 249,
-   "entregues": 123,
+   "envios": 251,
+   "entregues": 124,
    "lidas": 67,
    "respondidas": 11,
    "falhas": 0
@@ -98,7 +108,7 @@
    "vendedor": "Vitor Espinola",
    "envios": 244,
    "entregues": 77,
-   "lidas": 42,
+   "lidas": 43,
    "respondidas": 13,
    "falhas": 0
   }
@@ -125,7 +135,7 @@
   {
    "numero": "5521990860631",
    "vendedor": "Marlon Matos",
-   "qualidade": "GREEN",
+   "qualidade": "RED",
    "status": "CONNECTED",
    "limite": "TIER_2K",
    "nome_exibicao": "Marlon Matos",
@@ -147,6 +157,15 @@
    "status": "CONNECTED",
    "limite": "TIER_2K",
    "nome_exibicao": "Rafael Reis",
+   "status_nome": "PENDING_REVIEW"
+  },
+  {
+   "numero": "5521990853689",
+   "vendedor": "João Gomes",
+   "qualidade": "GREEN",
+   "status": "CONNECTED",
+   "limite": "TIER_2K",
+   "nome_exibicao": "João Gomes",
    "status_nome": "PENDING_REVIEW"
   }
  ],
