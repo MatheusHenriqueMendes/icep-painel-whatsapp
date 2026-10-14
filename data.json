@@ -1,5 +1,5 @@
 {
- "geradoEm": "2026-10-14T16:31:46.099Z",
+ "geradoEm": "2026-10-14T16:47:01.644Z",
  "fonteEnvios": "fluxo",
  "rows": [
   {
@@ -56,39 +56,39 @@
    "data": "2026-10-14",
    "numero": "5521968950069",
    "vendedor": "Caroline Oliveira",
-   "envios": 239,
-   "entregues": 102,
-   "lidas": 55,
-   "respondidas": 15,
+   "envios": 241,
+   "entregues": 104,
+   "lidas": 56,
+   "respondidas": 16,
    "falhas": 0
   },
   {
    "data": "2026-10-14",
    "numero": "5521968566838",
    "vendedor": "Gabriel Moreira",
-   "envios": 294,
-   "entregues": 68,
-   "lidas": 27,
-   "respondidas": 13,
+   "envios": 338,
+   "entregues": 91,
+   "lidas": 41,
+   "respondidas": 19,
    "falhas": 0
   },
   {
    "data": "2026-10-14",
    "numero": "5521990860631",
    "vendedor": "Marlon Matos",
-   "envios": 240,
-   "entregues": 114,
+   "envios": 242,
+   "entregues": 116,
    "lidas": 60,
-   "respondidas": 14,
+   "respondidas": 15,
    "falhas": 0
   },
   {
    "data": "2026-10-14",
    "numero": "5521966618116",
    "vendedor": "Rafael Reis",
-   "envios": 240,
-   "entregues": 119,
-   "lidas": 62,
+   "envios": 242,
+   "entregues": 120,
+   "lidas": 64,
    "respondidas": 10,
    "falhas": 0
   },
@@ -96,9 +96,9 @@
    "data": "2026-10-14",
    "numero": "5521976164516",
    "vendedor": "Vitor Espinola",
-   "envios": 240,
-   "entregues": 74,
-   "lidas": 37,
+   "envios": 242,
+   "entregues": 77,
+   "lidas": 40,
    "respondidas": 12,
    "falhas": 0
   }
