@@ -1,5 +1,5 @@
 {
- "geradoEm": "2026-10-14T01:49:42.196Z",
+ "geradoEm": "2026-10-14T07:30:38.565Z",
  "fonteEnvios": "fluxo",
  "rows": [
   {
@@ -58,7 +58,7 @@
    "vendedor": "Caroline Oliveira",
    "envios": 0,
    "entregues": 0,
-   "lidas": 3,
+   "lidas": 4,
    "respondidas": 0
   },
   {
@@ -75,7 +75,7 @@
    "numero": "5521976164516",
    "vendedor": "Vitor Espinola",
    "envios": 0,
-   "entregues": 0,
+   "entregues": 1,
    "lidas": 2,
    "respondidas": 1
   }
