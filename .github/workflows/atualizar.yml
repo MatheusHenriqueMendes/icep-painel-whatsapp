@@ -1,6 +1,11 @@
 name: Atualizar painel
 
 on:
+  # Gatilho principal: toda vez que o sistema de disparo publica o envios.json (a cada 15 min, das 8h às 18h em dias úteis)
+  push:
+    branches: [main]
+    paths: ['envios.json']
+  # Reserva: o agendamento do GitHub atrasa ou pula horários, por isso não é o gatilho principal
   schedule:
     # A cada 1 hora, todos os dias (no minuto 7 de cada hora, para fugir do pico do GitHub no minuto 0)
     - cron: '7 * * * *'
