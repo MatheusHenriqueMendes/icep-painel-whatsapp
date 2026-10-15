@@ -1,5 +1,5 @@
 {
- "geradoEm": "2026-10-15T01:25:02.217Z",
+ "geradoEm": "2026-10-15T07:20:49.459Z",
  "fonteEnvios": "fluxo",
  "rows": [
   {
@@ -114,11 +114,20 @@
   },
   {
    "data": "2026-10-15",
+   "numero": "5521968950069",
+   "vendedor": "Caroline Oliveira",
+   "envios": 0,
+   "entregues": 2,
+   "lidas": 2,
+   "respondidas": 0
+  },
+  {
+   "data": "2026-10-15",
    "numero": "5521968566838",
    "vendedor": "Gabriel Moreira",
    "envios": 0,
    "entregues": 0,
-   "lidas": 1,
+   "lidas": 3,
    "respondidas": 1
   },
   {
@@ -127,7 +136,7 @@
    "vendedor": "Marlon Matos",
    "envios": 0,
    "entregues": 1,
-   "lidas": 1,
+   "lidas": 3,
    "respondidas": 0
   },
   {
@@ -136,7 +145,7 @@
    "vendedor": "Rafael Reis",
    "envios": 0,
    "entregues": 0,
-   "lidas": 2,
+   "lidas": 3,
    "respondidas": 0
   },
   {
@@ -145,7 +154,7 @@
    "vendedor": "Vitor Espinola",
    "envios": 0,
    "entregues": 0,
-   "lidas": 1,
+   "lidas": 2,
    "respondidas": 0
   }
  ],
