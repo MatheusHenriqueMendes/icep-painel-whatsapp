@@ -1,5 +1,5 @@
 {
- "geradoEm": "2026-10-15T07:20:49.459Z",
+ "geradoEm": "2026-10-15T11:01:17.506Z",
  "fonteEnvios": "fluxo",
  "rows": [
   {
@@ -56,7 +56,7 @@
    "data": "2026-10-14",
    "numero": "5521968950069",
    "vendedor": "Caroline Oliveira",
-   "envios": 277,
+   "envios": 278,
    "entregues": 119,
    "lidas": 71,
    "respondidas": 16,
@@ -66,7 +66,7 @@
    "data": "2026-10-14",
    "numero": "5521968566838",
    "vendedor": "Gabriel Moreira",
-   "envios": 656,
+   "envios": 658,
    "entregues": 255,
    "lidas": 151,
    "respondidas": 56,
@@ -76,7 +76,7 @@
    "data": "2026-10-14",
    "numero": "5521990853689",
    "vendedor": "João Gomes",
-   "envios": 165,
+   "envios": 168,
    "entregues": 72,
    "lidas": 36,
    "respondidas": 15,
@@ -86,7 +86,7 @@
    "data": "2026-10-14",
    "numero": "5521990860631",
    "vendedor": "Marlon Matos",
-   "envios": 368,
+   "envios": 369,
    "entregues": 179,
    "lidas": 103,
    "respondidas": 17,
@@ -96,7 +96,7 @@
    "data": "2026-10-14",
    "numero": "5521966618116",
    "vendedor": "Rafael Reis",
-   "envios": 278,
+   "envios": 279,
    "entregues": 140,
    "lidas": 80,
    "respondidas": 13,
@@ -116,37 +116,51 @@
    "data": "2026-10-15",
    "numero": "5521968950069",
    "vendedor": "Caroline Oliveira",
-   "envios": 0,
-   "entregues": 2,
+   "envios": 1,
+   "entregues": 3,
    "lidas": 2,
-   "respondidas": 0
+   "respondidas": 0,
+   "falhas": 0
   },
   {
    "data": "2026-10-15",
    "numero": "5521968566838",
    "vendedor": "Gabriel Moreira",
-   "envios": 0,
+   "envios": 2,
    "entregues": 0,
    "lidas": 3,
-   "respondidas": 1
+   "respondidas": 1,
+   "falhas": 0
+  },
+  {
+   "data": "2026-10-15",
+   "numero": "5521990853689",
+   "vendedor": "João Gomes",
+   "envios": 2,
+   "entregues": 0,
+   "lidas": 1,
+   "respondidas": 0,
+   "falhas": 0
   },
   {
    "data": "2026-10-15",
    "numero": "5521990860631",
    "vendedor": "Marlon Matos",
-   "envios": 0,
+   "envios": 2,
    "entregues": 1,
    "lidas": 3,
-   "respondidas": 0
+   "respondidas": 0,
+   "falhas": 0
   },
   {
    "data": "2026-10-15",
    "numero": "5521966618116",
    "vendedor": "Rafael Reis",
-   "envios": 0,
+   "envios": 1,
    "entregues": 0,
-   "lidas": 3,
-   "respondidas": 0
+   "lidas": 4,
+   "respondidas": 0,
+   "falhas": 0
   },
   {
    "data": "2026-10-15",
@@ -155,7 +169,8 @@
    "envios": 0,
    "entregues": 0,
    "lidas": 2,
-   "respondidas": 0
+   "respondidas": 0,
+   "falhas": 0
   }
  ],
  "status": [
