@@ -1,5 +1,5 @@
 {
- "geradoEm": "2026-10-14T20:58:16.120Z",
+ "geradoEm": "2026-10-15T11:00:34.136Z",
  "fonte": "fluxo de disparo",
  "rows": [
   {
@@ -46,7 +46,7 @@
    "data": "2026-10-14",
    "numero": "5521990860631",
    "vendedor": "Marlon Matos",
-   "envios": 368,
+   "envios": 369,
    "falhas": 0,
    "descartados": 0
   },
@@ -54,7 +54,7 @@
    "data": "2026-10-14",
    "numero": "5521966618116",
    "vendedor": "Rafael Reis",
-   "envios": 278,
+   "envios": 279,
    "falhas": 0,
    "descartados": 0
   },
@@ -70,7 +70,7 @@
    "data": "2026-10-14",
    "numero": "5521968950069",
    "vendedor": "Caroline Oliveira",
-   "envios": 277,
+   "envios": 278,
    "falhas": 0,
    "descartados": 0
   },
@@ -78,7 +78,7 @@
    "data": "2026-10-14",
    "numero": "5521968566838",
    "vendedor": "Gabriel Moreira",
-   "envios": 656,
+   "envios": 658,
    "falhas": 0,
    "descartados": 0
   },
@@ -86,7 +86,47 @@
    "data": "2026-10-14",
    "numero": "5521990853689",
    "vendedor": "João Gomes",
-   "envios": 165,
+   "envios": 168,
+   "falhas": 0,
+   "descartados": 0
+  },
+  {
+   "data": "2026-10-15",
+   "numero": "5521990860631",
+   "vendedor": "Marlon Matos",
+   "envios": 2,
+   "falhas": 0,
+   "descartados": 0
+  },
+  {
+   "data": "2026-10-15",
+   "numero": "5521966618116",
+   "vendedor": "Rafael Reis",
+   "envios": 1,
+   "falhas": 0,
+   "descartados": 0
+  },
+  {
+   "data": "2026-10-15",
+   "numero": "5521968950069",
+   "vendedor": "Caroline Oliveira",
+   "envios": 1,
+   "falhas": 0,
+   "descartados": 0
+  },
+  {
+   "data": "2026-10-15",
+   "numero": "5521968566838",
+   "vendedor": "Gabriel Moreira",
+   "envios": 2,
+   "falhas": 0,
+   "descartados": 0
+  },
+  {
+   "data": "2026-10-15",
+   "numero": "5521990853689",
+   "vendedor": "João Gomes",
+   "envios": 2,
    "falhas": 0,
    "descartados": 0
   }
