@@ -1,5 +1,5 @@
 {
- "geradoEm": "2026-10-15T13:22:44.801Z",
+ "geradoEm": "2026-10-15T13:35:35.451Z",
  "fonteEnvios": "fluxo",
  "rows": [
   {
@@ -127,9 +127,9 @@
    "numero": "5521968566838",
    "vendedor": "Gabriel Moreira",
    "envios": 234,
-   "entregues": 5,
-   "lidas": 3,
-   "respondidas": 8,
+   "entregues": 7,
+   "lidas": 7,
+   "respondidas": 10,
    "falhas": 0
   },
   {
@@ -137,9 +137,9 @@
    "numero": "5521990853689",
    "vendedor": "João Gomes",
    "envios": 233,
-   "entregues": 6,
+   "entregues": 9,
    "lidas": 1,
-   "respondidas": 3,
+   "respondidas": 4,
    "falhas": 0
   },
   {
@@ -175,13 +175,13 @@
  ],
  "status": [
   {
-   "numero": "5521968950069",
-   "vendedor": "Caroline Oliveira",
-   "qualidade": "SEM_LEITURA",
-   "status": "SEM_LEITURA",
-   "limite": null,
-   "nome_exibicao": null,
-   "status_nome": null
+   "numero": "5521990853689",
+   "vendedor": "João Gomes",
+   "qualidade": "GREEN",
+   "status": "CONNECTED",
+   "limite": "TIER_2K",
+   "nome_exibicao": "João Gomes",
+   "status_nome": "PENDING_REVIEW"
   },
   {
    "numero": "5521968566838",
@@ -191,51 +191,8 @@
    "limite": "TIER_2K",
    "nome_exibicao": "Camila Menezes",
    "status_nome": "DECLINED"
-  },
-  {
-   "numero": "5521990860631",
-   "vendedor": "Marlon Matos",
-   "qualidade": "SEM_LEITURA",
-   "status": "SEM_LEITURA",
-   "limite": null,
-   "nome_exibicao": null,
-   "status_nome": null
-  },
-  {
-   "numero": "5521976164516",
-   "vendedor": "Vitor Espinola",
-   "qualidade": "RED",
-   "status": "CONNECTED",
-   "limite": "TIER_2K",
-   "nome_exibicao": "Vitor Espinola",
-   "status_nome": "DECLINED"
-  },
-  {
-   "numero": "5521966618116",
-   "vendedor": "Rafael Reis",
-   "qualidade": "SEM_LEITURA",
-   "status": "SEM_LEITURA",
-   "limite": null,
-   "nome_exibicao": null,
-   "status_nome": null
-  },
-  {
-   "numero": "5521990853689",
-   "vendedor": "João Gomes",
-   "qualidade": "GREEN",
-   "status": "CONNECTED",
-   "limite": "TIER_2K",
-   "nome_exibicao": "João Gomes",
-   "status_nome": "PENDING_REVIEW"
   }
  ],
  "tempoRetorno": null,
- "avisos": [
-  "Caroline Oliveira: Meta /v23.0/1823835488614892/message_templates: Unsupported get request. Object with ID '1823835488614892' does not exist, cannot be loaded due to missing permissions, or does not support this operation. Please read the Graph API documentation at https://developers.facebook.com/docs/graph-api",
-  "Caroline Oliveira (status): Meta /v23.0/1823835488614892: Unsupported get request. Object with ID '1823835488614892' does not exist, cannot be loaded due to missing permissions, or does not support this operation. Please read the Graph API documentation at https://developers.facebook.com/docs/graph-api",
-  "Marlon Matos: Meta /v23.0/2939549596392485/message_templates: Unsupported get request. Object with ID '2939549596392485' does not exist, cannot be loaded due to missing permissions, or does not support this operation. Please read the Graph API documentation at https://developers.facebook.com/docs/graph-api",
-  "Marlon Matos (status): Meta /v23.0/2939549596392485: Unsupported get request. Object with ID '2939549596392485' does not exist, cannot be loaded due to missing permissions, or does not support this operation. Please read the Graph API documentation at https://developers.facebook.com/docs/graph-api",
-  "Rafael Reis: Meta /v23.0/1649127593490122/message_templates: Unsupported get request. Object with ID '1649127593490122' does not exist, cannot be loaded due to missing permissions, or does not support this operation. Please read the Graph API documentation at https://developers.facebook.com/docs/graph-api",
-  "Rafael Reis (status): Meta /v23.0/1649127593490122: Unsupported get request. Object with ID '1649127593490122' does not exist, cannot be loaded due to missing permissions, or does not support this operation. Please read the Graph API documentation at https://developers.facebook.com/docs/graph-api"
- ]
+ "avisos": []
 }
