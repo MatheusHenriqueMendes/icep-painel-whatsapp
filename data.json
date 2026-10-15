@@ -1,5 +1,5 @@
 {
- "geradoEm": "2026-10-15T11:47:47.604Z",
+ "geradoEm": "2026-10-15T12:02:54.163Z",
  "fonteEnvios": "fluxo",
  "rows": [
   {
@@ -37,8 +37,8 @@
    "numero": "5521966618116",
    "vendedor": "Rafael Reis",
    "envios": 333,
-   "entregues": 147,
-   "lidas": 82,
+   "entregues": 0,
+   "lidas": 0,
    "respondidas": 20,
    "falhas": 0
   },
@@ -97,8 +97,8 @@
    "numero": "5521966618116",
    "vendedor": "Rafael Reis",
    "envios": 279,
-   "entregues": 140,
-   "lidas": 80,
+   "entregues": 0,
+   "lidas": 0,
    "respondidas": 13,
    "falhas": 0
   },
@@ -116,7 +116,7 @@
    "data": "2026-10-15",
    "numero": "5521968950069",
    "vendedor": "Caroline Oliveira",
-   "envios": 5,
+   "envios": 7,
    "entregues": 3,
    "lidas": 2,
    "respondidas": 0,
@@ -126,7 +126,7 @@
    "data": "2026-10-15",
    "numero": "5521968566838",
    "vendedor": "Gabriel Moreira",
-   "envios": 57,
+   "envios": 74,
    "entregues": 0,
    "lidas": 3,
    "respondidas": 5,
@@ -136,7 +136,7 @@
    "data": "2026-10-15",
    "numero": "5521990853689",
    "vendedor": "João Gomes",
-   "envios": 56,
+   "envios": 73,
    "entregues": 0,
    "lidas": 1,
    "respondidas": 0,
@@ -146,7 +146,7 @@
    "data": "2026-10-15",
    "numero": "5521990860631",
    "vendedor": "Marlon Matos",
-   "envios": 57,
+   "envios": 74,
    "entregues": 1,
    "lidas": 3,
    "respondidas": 0,
@@ -156,11 +156,11 @@
    "data": "2026-10-15",
    "numero": "5521966618116",
    "vendedor": "Rafael Reis",
-   "envios": 5,
-   "entregues": 1,
-   "lidas": 4,
+   "envios": 6,
+   "entregues": 0,
+   "lidas": 0,
    "respondidas": 0,
-   "falhas": 0
+   "falhas": 1
   },
   {
    "data": "2026-10-15",
@@ -195,7 +195,7 @@
   {
    "numero": "5521990860631",
    "vendedor": "Marlon Matos",
-   "qualidade": "GREEN",
+   "qualidade": "RED",
    "status": "CONNECTED",
    "limite": "TIER_2K",
    "nome_exibicao": "Marlon Matos",
@@ -213,11 +213,11 @@
   {
    "numero": "5521966618116",
    "vendedor": "Rafael Reis",
-   "qualidade": "RED",
-   "status": "CONNECTED",
-   "limite": "TIER_2K",
-   "nome_exibicao": "Rafael Reis",
-   "status_nome": "PENDING_REVIEW"
+   "qualidade": "SEM_LEITURA",
+   "status": "SEM_LEITURA",
+   "limite": null,
+   "nome_exibicao": null,
+   "status_nome": null
   },
   {
    "numero": "5521990853689",
@@ -230,5 +230,8 @@
   }
  ],
  "tempoRetorno": null,
- "avisos": []
+ "avisos": [
+  "Rafael Reis: Meta /v23.0/1649127593490122/message_templates: Unsupported get request. Object with ID '1649127593490122' does not exist, cannot be loaded due to missing permissions, or does not support this operation. Please read the Graph API documentation at https://developers.facebook.com/docs/graph-api",
+  "Rafael Reis (status): Meta /v23.0/1649127593490122: Unsupported get request. Object with ID '1649127593490122' does not exist, cannot be loaded due to missing permissions, or does not support this operation. Please read the Graph API documentation at https://developers.facebook.com/docs/graph-api"
+ ]
 }
