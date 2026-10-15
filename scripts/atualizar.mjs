@@ -10,14 +10,15 @@ const G = 'https://graph.facebook.com/v23.0/';
 const INICIO = '2026-10-05';
 // O cliente só vê dados a partir desta data (dias anteriores não entram no data.json publicado)
 const INICIO_PAINEL = '2026-10-13';
+// 15/10/2026: só João Gomes e Gabriel Moreira seguem na API oficial (disparam para cards de qualquer responsável).
+// Os demais ficam na lista só para o histórico do painel (envios/entregas dos dias em que dispararam).
 const OPS = [
+  { vendedor: 'João Gomes', userId: 2854, numero: '5521990853689', waba: '1898025354914977', ativo: true },
+  { vendedor: 'Gabriel Moreira', userId: 2638, userIdsExtras: [666], numero: '5521968566838', waba: '1073858668600531', ativo: true },
   { vendedor: 'Caroline Oliveira', userId: 730, numero: '5521968950069', waba: '1823835488614892' },
-  // 13/10/2026: número da Camila Menezes (666) transferido para Gabriel Moreira (2638); respostas dos dois IDs contam para o número
-  { vendedor: 'Gabriel Moreira', userId: 2638, userIdsExtras: [666], numero: '5521968566838', waba: '1073858668600531' },
   { vendedor: 'Marlon Matos', userId: 270, numero: '5521990860631', waba: '2939549596392485' },
   { vendedor: 'Vitor Espinola', userId: 668, numero: '5521976164516', waba: '1161584776580207' },
-  { vendedor: 'Rafael Reis', userId: 292, numero: '5521966618116', waba: '1649127593490122' },
-  { vendedor: 'João Gomes', userId: 2854, numero: '5521990853689', waba: '1898025354914977' }
+  { vendedor: 'Rafael Reis', userId: 292, numero: '5521966618116', waba: '1649127593490122' }
 ];
 
 const sleep = ms => new Promise(r => setTimeout(r, ms));
@@ -64,13 +65,13 @@ for (const op of OPS) {
         url = r.paging?.next || null; params = null;
       }
     }
-  } catch (e) { avisos.push(op.vendedor + ': ' + e.message); }
-  try {
+  } catch (e) { if (op.ativo) avisos.push(op.vendedor + ': ' + e.message); } // números fora da API não são mais acessíveis: o histórico deles vem do envios.json
+  if (op.ativo) try {
     const s = await meta(op.waba, { fields: 'phone_numbers{display_phone_number,verified_name,status,quality_rating,whatsapp_business_manager_messaging_limit,name_status}' });
     const n = (s.phone_numbers?.data || []).find(x => String(x.display_phone_number).replace(/\D/g, '') === op.numero);
     status.push({ numero: op.numero, vendedor: op.vendedor, qualidade: n?.quality_rating || 'SEM_LEITURA', status: n?.status || 'SEM_LEITURA', limite: n?.whatsapp_business_manager_messaging_limit || null, nome_exibicao: n?.verified_name || null, status_nome: n?.name_status || null });
   } catch (e) {
-    status.push({ numero: op.numero, vendedor: op.vendedor, qualidade: 'SEM_LEITURA', status: 'SEM_LEITURA', limite: null, nome_exibicao: null, status_nome: null });
+    if (op.ativo) status.push({ numero: op.numero, vendedor: op.vendedor, qualidade: 'SEM_LEITURA', status: 'SEM_LEITURA', limite: null, nome_exibicao: null, status_nome: null });
     avisos.push(op.vendedor + ' (status): ' + e.message);
   }
 }
@@ -80,9 +81,10 @@ const porUser = {};
 for (const o of OPS) for (const u of [o.userId, ...(o.userIdsExtras || [])]) porUser[String(u)] = o;
 let start = 0;
 for (let p = 0; p < 400; p++) {
-  const r = await bitrix('crm.activity.list', { filter: { PROVIDER_ID: 'IMOPENLINES_SESSION', '>=CREATED': INICIO + 'T00:00:00' }, select: ['ID', 'CREATED', 'RESPONSIBLE_ID'], order: { ID: 'ASC' }, start });
+  const r = await bitrix('crm.activity.list', { filter: { PROVIDER_ID: 'IMOPENLINES_SESSION', '>=CREATED': INICIO + 'T00:00:00' }, select: ['ID', 'CREATED', 'RESPONSIBLE_ID', 'SUBJECT'], order: { ID: 'ASC' }, start });
   for (const a of (r.result || [])) {
-    const op = porUser[String(a.RESPONSIBLE_ID)];
+    const assunto = String(a.SUBJECT || ''), digitos = assunto.replace(/\D/g, '');
+    const op = OPS.find(o => digitos.includes(o.numero.slice(2))) || OPS.find(o => assunto.includes(o.vendedor)) || porUser[String(a.RESPONSIBLE_ID)];
     if (op) linha(new Date(a.CREATED).toISOString().slice(0, 10), op).respondidas++;
   }
   if (r.next == null) break;

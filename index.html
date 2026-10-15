@@ -77,8 +77,8 @@ footer { color: var(--muted); font-size: .75rem; line-height: 1.5; }
   </section>
 
   <section class="card">
-    <h2>Qualidade e status dos números</h2>
-    <p class="note">Leitura da Meta: qualidade, conexão, limite diário e aprovação do nome de exibição</p>
+    <h2>Qualidade e status dos números de disparo</h2>
+    <p class="note">Números ativos na API oficial. Leitura da Meta: qualidade, conexão, limite diário e aprovação do nome de exibição</p>
     <div class="tbox"><table id="t-status"><thead><tr><th>Vendedor</th><th>Número</th><th>Qualidade</th><th>Status</th><th>Limite</th><th>Nome de exibição</th><th>Aprovação do nome</th></tr></thead><tbody></tbody></table></div>
   </section>
 
@@ -222,7 +222,10 @@ fetch('data.json?v=' + Date.now()).then(r => r.json()).then(d => {
   const dias = Array.from(new Set(d.rows.map(r => r.data))).sort();
   for (const id of ['f-ini', 'f-fim']) for (const dia of dias) { const o = document.createElement('option'); o.value = dia; o.textContent = fDiaAno(dia); el(id).appendChild(o); }
   el('f-ini').value = dias[0]; el('f-fim').value = dias[dias.length - 1];
-  for (const s of d.status) { const o = document.createElement('option'); o.value = String(s.numero); o.textContent = s.vendedor + ' (' + fFone(s.numero) + ')'; el('f-num').appendChild(o); }
+  const nums = new Map();
+  for (const s of d.status) nums.set(String(s.numero), s.vendedor);
+  for (const r of d.rows) if (!nums.has(String(r.numero))) nums.set(String(r.numero), r.vendedor + ' (fora da API)');
+  for (const [num, nome] of nums) { const o = document.createElement('option'); o.value = num; o.textContent = nome + ' – ' + fFone(num); el('f-num').appendChild(o); }
   el('upd').textContent = 'Atualizado em ' + new Date(d.geradoEm).toLocaleString('pt-BR', { timeZone: 'America/Sao_Paulo' });
   for (const id of ['f-ini', 'f-fim', 'f-num']) el(id).addEventListener('change', () => { if (el('f-ini').value > el('f-fim').value) el('f-fim').value = el('f-ini').value; render(); });
   el('t-det').querySelectorAll('th').forEach(th => th.addEventListener('click', () => { const k = th.dataset.k; ord = { k, asc: ord.k === k ? !ord.asc : false }; render(); }));
