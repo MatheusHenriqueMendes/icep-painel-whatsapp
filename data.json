@@ -1,5 +1,5 @@
 {
- "geradoEm": "2026-10-16T11:48:45.900Z",
+ "geradoEm": "2026-10-16T12:04:46.843Z",
  "fonteEnvios": "fluxo",
  "rows": [
   {
@@ -176,7 +176,7 @@
    "data": "2026-10-16",
    "numero": "5521968566838",
    "vendedor": "Gabriel Moreira",
-   "envios": 96,
+   "envios": 126,
    "entregues": 1,
    "lidas": 3,
    "respondidas": 1,
@@ -186,7 +186,7 @@
    "data": "2026-10-16",
    "numero": "5521990853689",
    "vendedor": "João Gomes",
-   "envios": 96,
+   "envios": 122,
    "entregues": 1,
    "lidas": 3,
    "respondidas": 1,
@@ -197,7 +197,7 @@
   {
    "numero": "5521990853689",
    "vendedor": "João Gomes",
-   "qualidade": "GREEN",
+   "qualidade": "RED",
    "status": "CONNECTED",
    "limite": "TIER_2K",
    "nome_exibicao": "João Gomes",
