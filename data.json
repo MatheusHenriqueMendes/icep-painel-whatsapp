@@ -1,5 +1,5 @@
 {
- "geradoEm": "2026-10-16T20:59:26.596Z",
+ "geradoEm": "2026-10-16T23:30:40.010Z",
  "fonteEnvios": "fluxo",
  "rows": [
   {
@@ -187,8 +187,8 @@
    "numero": "5521968566838",
    "vendedor": "Gabriel Moreira",
    "envios": 837,
-   "entregues": 2,
-   "lidas": 5,
+   "entregues": 21,
+   "lidas": 16,
    "respondidas": 6,
    "falhas": 0
   },
@@ -197,8 +197,8 @@
    "numero": "5521990853689",
    "vendedor": "João Gomes",
    "envios": 148,
-   "entregues": 43,
-   "lidas": 39,
+   "entregues": 61,
+   "lidas": 50,
    "respondidas": 6,
    "falhas": 0
   },
@@ -210,6 +210,16 @@
    "entregues": 0,
    "lidas": 0,
    "respondidas": 4,
+   "falhas": 0
+  },
+  {
+   "data": "2026-10-16",
+   "numero": "5521976164516",
+   "vendedor": "Vitor Espinola",
+   "envios": 0,
+   "entregues": 0,
+   "lidas": 1,
+   "respondidas": 0,
    "falhas": 0
   }
  ],
@@ -226,7 +236,7 @@
   {
    "numero": "5521968566838",
    "vendedor": "Gabriel Moreira",
-   "qualidade": "GREEN",
+   "qualidade": "RED",
    "status": "CONNECTED",
    "limite": "TIER_2K",
    "nome_exibicao": "Camila Menezes",
