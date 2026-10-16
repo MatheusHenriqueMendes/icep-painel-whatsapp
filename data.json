@@ -1,5 +1,5 @@
 {
- "geradoEm": "2026-10-16T11:16:35.694Z",
+ "geradoEm": "2026-10-16T11:32:43.518Z",
  "fonteEnvios": "fluxo",
  "rows": [
   {
@@ -9,7 +9,7 @@
    "envios": 297,
    "entregues": 0,
    "lidas": 0,
-   "respondidas": 0,
+   "respondidas": 21,
    "falhas": 0
   },
   {
@@ -29,7 +29,7 @@
    "envios": 346,
    "entregues": 0,
    "lidas": 0,
-   "respondidas": 0,
+   "respondidas": 10,
    "falhas": 0
   },
   {
@@ -39,7 +39,7 @@
    "envios": 333,
    "entregues": 0,
    "lidas": 0,
-   "respondidas": 0,
+   "respondidas": 20,
    "falhas": 0
   },
   {
@@ -49,7 +49,7 @@
    "envios": 1026,
    "entregues": 403,
    "lidas": 237,
-   "respondidas": 0,
+   "respondidas": 54,
    "falhas": 0
   },
   {
@@ -59,7 +59,7 @@
    "envios": 278,
    "entregues": 0,
    "lidas": 0,
-   "respondidas": 0,
+   "respondidas": 16,
    "falhas": 0
   },
   {
@@ -69,7 +69,7 @@
    "envios": 658,
    "entregues": 255,
    "lidas": 151,
-   "respondidas": 0,
+   "respondidas": 56,
    "falhas": 0
   },
   {
@@ -79,7 +79,7 @@
    "envios": 168,
    "entregues": 72,
    "lidas": 36,
-   "respondidas": 0,
+   "respondidas": 15,
    "falhas": 0
   },
   {
@@ -89,7 +89,7 @@
    "envios": 369,
    "entregues": 0,
    "lidas": 0,
-   "respondidas": 0,
+   "respondidas": 17,
    "falhas": 0
   },
   {
@@ -99,7 +99,7 @@
    "envios": 279,
    "entregues": 0,
    "lidas": 0,
-   "respondidas": 0,
+   "respondidas": 13,
    "falhas": 0
   },
   {
@@ -109,7 +109,7 @@
    "envios": 244,
    "entregues": 79,
    "lidas": 51,
-   "respondidas": 0,
+   "respondidas": 14,
    "falhas": 0
   },
   {
@@ -119,7 +119,7 @@
    "envios": 7,
    "entregues": 0,
    "lidas": 0,
-   "respondidas": 0,
+   "respondidas": 36,
    "falhas": 1
   },
   {
@@ -129,7 +129,7 @@
    "envios": 956,
    "entregues": 238,
    "lidas": 141,
-   "respondidas": 0,
+   "respondidas": 41,
    "falhas": 0
   },
   {
@@ -139,7 +139,7 @@
    "envios": 955,
    "entregues": 391,
    "lidas": 233,
-   "respondidas": 0,
+   "respondidas": 61,
    "falhas": 0
   },
   {
@@ -149,7 +149,7 @@
    "envios": 76,
    "entregues": 0,
    "lidas": 0,
-   "respondidas": 0,
+   "respondidas": 1,
    "falhas": 1
   },
   {
@@ -159,7 +159,7 @@
    "envios": 6,
    "entregues": 0,
    "lidas": 0,
-   "respondidas": 0,
+   "respondidas": 1,
    "falhas": 1
   },
   {
@@ -176,20 +176,20 @@
    "data": "2026-10-16",
    "numero": "5521968566838",
    "vendedor": "Gabriel Moreira",
-   "envios": 34,
+   "envios": 66,
    "entregues": 1,
    "lidas": 3,
-   "respondidas": 0,
+   "respondidas": 1,
    "falhas": 0
   },
   {
    "data": "2026-10-16",
    "numero": "5521990853689",
    "vendedor": "João Gomes",
-   "envios": 34,
+   "envios": 66,
    "entregues": 1,
    "lidas": 3,
-   "respondidas": 0,
+   "respondidas": 1,
    "falhas": 0
   }
  ],
