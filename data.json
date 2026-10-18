@@ -1,5 +1,5 @@
 {
- "geradoEm": "2026-10-18T05:47:22.218Z",
+ "geradoEm": "2026-10-18T10:56:17.297Z",
  "fonteEnvios": "fluxo",
  "rows": [
   {
@@ -255,7 +255,7 @@
    "vendedor": "João Gomes",
    "envios": 0,
    "entregues": 1,
-   "lidas": 0,
+   "lidas": 2,
    "respondidas": 0
   }
  ],
