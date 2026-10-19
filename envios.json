@@ -1,5 +1,5 @@
 {
- "geradoEm": "2026-10-19T16:04:09.519Z",
+ "geradoEm": "2026-10-19T16:20:09.861Z",
  "fonte": "fluxo de disparo",
  "numerosAtivos": [
   "5521990853689",
@@ -154,7 +154,7 @@
    "data": "2026-10-19",
    "numero": "5521968566838",
    "vendedor": "Gabriel Moreira",
-   "envios": 610,
+   "envios": 642,
    "falhas": 0,
    "descartados": 0
   },
@@ -162,7 +162,7 @@
    "data": "2026-10-19",
    "numero": "5521990853689",
    "vendedor": "João Gomes",
-   "envios": 610,
+   "envios": 642,
    "falhas": 0,
    "descartados": 0
   }
