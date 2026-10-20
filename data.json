@@ -1,5 +1,5 @@
 {
- "geradoEm": "2026-10-20T18:28:48.061Z",
+ "geradoEm": "2026-10-20T18:44:47.167Z",
  "fonteEnvios": "fluxo",
  "rows": [
   {
@@ -341,20 +341,20 @@
    "data": "2026-10-20",
    "numero": "5521968566838",
    "vendedor": "Gabriel Moreira",
-   "envios": 849,
-   "entregues": 293,
-   "lidas": 171,
-   "respondidas": 49,
+   "envios": 865,
+   "entregues": 298,
+   "lidas": 173,
+   "respondidas": 50,
    "falhas": 0
   },
   {
    "data": "2026-10-20",
    "numero": "5521990853689",
    "vendedor": "João Gomes",
-   "envios": 848,
-   "entregues": 328,
-   "lidas": 193,
-   "respondidas": 77,
+   "envios": 864,
+   "entregues": 335,
+   "lidas": 196,
+   "respondidas": 78,
    "falhas": 0
   },
   {
