@@ -1,5 +1,5 @@
 {
- "geradoEm": "2026-10-21T19:15:46.352Z",
+ "geradoEm": "2026-10-21T19:31:47.108Z",
  "fonteEnvios": "fluxo",
  "rows": [
   {
@@ -334,7 +334,7 @@
    "envios": 0,
    "entregues": 0,
    "lidas": 0,
-   "respondidas": 30,
+   "respondidas": 15,
    "falhas": 0
   },
   {
@@ -344,7 +344,7 @@
    "envios": 1000,
    "entregues": 330,
    "lidas": 218,
-   "respondidas": 63,
+   "respondidas": 30,
    "falhas": 0
   },
   {
@@ -354,33 +354,13 @@
    "envios": 1000,
    "entregues": 379,
    "lidas": 235,
-   "respondidas": 83,
-   "falhas": 0
-  },
-  {
-   "data": "2026-10-20",
-   "numero": "5521990860631",
-   "vendedor": "Marlon Matos",
-   "envios": 0,
-   "entregues": 0,
-   "lidas": 0,
-   "respondidas": 1,
+   "respondidas": 50,
    "falhas": 0
   },
   {
    "data": "2026-10-20",
    "numero": "5521966618116",
    "vendedor": "Rafael Reis",
-   "envios": 0,
-   "entregues": 0,
-   "lidas": 0,
-   "respondidas": 1,
-   "falhas": 0
-  },
-  {
-   "data": "2026-10-21",
-   "numero": "5521968950069",
-   "vendedor": "Caroline Oliveira",
    "envios": 0,
    "entregues": 0,
    "lidas": 0,
@@ -391,40 +371,20 @@
    "data": "2026-10-21",
    "numero": "5521968566838",
    "vendedor": "Gabriel Moreira",
-   "envios": 897,
+   "envios": 913,
    "entregues": 32,
    "lidas": 24,
-   "respondidas": 18,
+   "respondidas": 0,
    "falhas": 0
   },
   {
    "data": "2026-10-21",
    "numero": "5521990853689",
    "vendedor": "João Gomes",
-   "envios": 896,
+   "envios": 912,
    "entregues": 31,
    "lidas": 31,
-   "respondidas": 8,
-   "falhas": 0
-  },
-  {
-   "data": "2026-10-21",
-   "numero": "5521990860631",
-   "vendedor": "Marlon Matos",
-   "envios": 0,
-   "entregues": 0,
-   "lidas": 0,
-   "respondidas": 1,
-   "falhas": 0
-  },
-  {
-   "data": "2026-10-21",
-   "numero": "5521966618116",
-   "vendedor": "Rafael Reis",
-   "envios": 0,
-   "entregues": 0,
-   "lidas": 0,
-   "respondidas": 1,
+   "respondidas": 0,
    "falhas": 0
   }
  ],
