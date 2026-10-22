@@ -1,5 +1,5 @@
 {
- "geradoEm": "2026-10-21T23:14:50.807Z",
+ "geradoEm": "2026-10-22T04:32:44.697Z",
  "fonteEnvios": "fluxo",
  "rows": [
   {
@@ -394,7 +394,7 @@
    "envios": 993,
    "entregues": 34,
    "lidas": 27,
-   "respondidas": 20,
+   "respondidas": 21,
    "falhas": 0
   },
   {
@@ -402,8 +402,8 @@
    "numero": "5521990853689",
    "vendedor": "João Gomes",
    "envios": 992,
-   "entregues": 34,
-   "lidas": 38,
+   "entregues": 35,
+   "lidas": 39,
    "respondidas": 9,
    "falhas": 0
   },
@@ -426,6 +426,24 @@
    "lidas": 0,
    "respondidas": 2,
    "falhas": 0
+  },
+  {
+   "data": "2026-10-22",
+   "numero": "5521968566838",
+   "vendedor": "Gabriel Moreira",
+   "envios": 0,
+   "entregues": 0,
+   "lidas": 2,
+   "respondidas": 0
+  },
+  {
+   "data": "2026-10-22",
+   "numero": "5521990853689",
+   "vendedor": "João Gomes",
+   "envios": 0,
+   "entregues": 1,
+   "lidas": 1,
+   "respondidas": 0
   }
  ],
  "status": [
