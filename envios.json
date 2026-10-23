@@ -1,5 +1,5 @@
 {
- "geradoEm": "2026-10-23T16:47:34.639Z",
+ "geradoEm": "2026-10-23T17:03:14.164Z",
  "fonte": "fluxo de disparo",
  "numerosAtivos": [
   "5521968566838",
@@ -222,7 +222,7 @@
    "data": "2026-10-23",
    "numero": "5521966693238",
    "vendedor": "Rafael Reis",
-   "envios": 382,
+   "envios": 394,
    "falhas": 0,
    "descartados": 0
   },
@@ -230,7 +230,7 @@
    "data": "2026-10-23",
    "numero": "5521966354719",
    "vendedor": "Caroline Oliveira",
-   "envios": 382,
+   "envios": 393,
    "falhas": 0,
    "descartados": 0
   },
@@ -238,7 +238,7 @@
    "data": "2026-10-23",
    "numero": "5521966433648",
    "vendedor": "Andreia Ferreira",
-   "envios": 381,
+   "envios": 393,
    "falhas": 0,
    "descartados": 0
   },
@@ -246,7 +246,7 @@
    "data": "2026-10-23",
    "numero": "5521990860631",
    "vendedor": "Marlon Matos",
-   "envios": 63,
+   "envios": 77,
    "falhas": 0,
    "descartados": 0
   },
@@ -254,7 +254,7 @@
    "data": "2026-10-23",
    "numero": "5521968566838",
    "vendedor": "Gabriel Moreira",
-   "envios": 14,
+   "envios": 15,
    "falhas": 0,
    "descartados": 0
   },
@@ -262,7 +262,7 @@
    "data": "2026-10-23",
    "numero": "5521990853689",
    "vendedor": "João Gomes",
-   "envios": 14,
+   "envios": 15,
    "falhas": 0,
    "descartados": 0
   }
