@@ -1,5 +1,5 @@
 {
- "geradoEm": "2026-10-23T18:21:12.604Z",
+ "geradoEm": "2026-10-23T18:37:06.708Z",
  "fonteEnvios": "fluxo",
  "rows": [
   {
@@ -451,7 +451,7 @@
    "data": "2026-10-23",
    "numero": "5521966433648",
    "vendedor": "Andreia Ferreira",
-   "envios": 449,
+   "envios": 461,
    "entregues": 0,
    "lidas": 0,
    "respondidas": 0,
@@ -461,7 +461,7 @@
    "data": "2026-10-23",
    "numero": "5521966354719",
    "vendedor": "Caroline Oliveira",
-   "envios": 450,
+   "envios": 461,
    "entregues": 0,
    "lidas": 0,
    "respondidas": 0,
@@ -471,7 +471,7 @@
    "data": "2026-10-23",
    "numero": "5521968566838",
    "vendedor": "Gabriel Moreira",
-   "envios": 23,
+   "envios": 24,
    "entregues": 1,
    "lidas": 4,
    "respondidas": 2,
@@ -481,7 +481,7 @@
    "data": "2026-10-23",
    "numero": "5521990853689",
    "vendedor": "João Gomes",
-   "envios": 23,
+   "envios": 24,
    "entregues": 0,
    "lidas": 4,
    "respondidas": 1,
@@ -491,7 +491,7 @@
    "data": "2026-10-23",
    "numero": "5521990860631",
    "vendedor": "Marlon Matos",
-   "envios": 146,
+   "envios": 161,
    "entregues": 0,
    "lidas": 0,
    "respondidas": 0,
@@ -501,7 +501,7 @@
    "data": "2026-10-23",
    "numero": "5521966693238",
    "vendedor": "Rafael Reis",
-   "envios": 450,
+   "envios": 461,
    "entregues": 0,
    "lidas": 0,
    "respondidas": 0,
@@ -513,19 +513,19 @@
    "numero": "5521990853689",
    "vendedor": "João Gomes",
    "qualidade": "RED",
-   "status": "CONNECTED",
+   "status": "BANNED",
    "limite": "TIER_2K",
    "nome_exibicao": "João Gomes",
-   "status_nome": "PENDING_REVIEW"
+   "status_nome": "DECLINED"
   },
   {
    "numero": "5521968566838",
    "vendedor": "Gabriel Moreira",
    "qualidade": "RED",
-   "status": "CONNECTED",
+   "status": "BANNED",
    "limite": "TIER_2K",
    "nome_exibicao": "Camila Menezes",
-   "status_nome": "PENDING_REVIEW"
+   "status_nome": "DECLINED"
   }
  ],
  "tempoRetorno": null,
