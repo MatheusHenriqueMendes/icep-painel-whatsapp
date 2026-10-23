@@ -1,5 +1,5 @@
 {
- "geradoEm": "2026-10-23T09:58:35.588Z",
+ "geradoEm": "2026-10-23T11:01:06.729Z",
  "fonteEnvios": "fluxo",
  "rows": [
   {
@@ -431,7 +431,7 @@
    "data": "2026-10-22",
    "numero": "5521968566838",
    "vendedor": "Gabriel Moreira",
-   "envios": 994,
+   "envios": 1001,
    "entregues": 44,
    "lidas": 31,
    "respondidas": 9,
@@ -441,10 +441,30 @@
    "data": "2026-10-22",
    "numero": "5521990853689",
    "vendedor": "João Gomes",
-   "envios": 992,
+   "envios": 999,
    "entregues": 34,
    "lidas": 24,
    "respondidas": 9,
+   "falhas": 0
+  },
+  {
+   "data": "2026-10-23",
+   "numero": "5521966433648",
+   "vendedor": "Andreia Ferreira",
+   "envios": 2,
+   "entregues": 0,
+   "lidas": 0,
+   "respondidas": 0,
+   "falhas": 0
+  },
+  {
+   "data": "2026-10-23",
+   "numero": "5521966354719",
+   "vendedor": "Caroline Oliveira",
+   "envios": 2,
+   "entregues": 0,
+   "lidas": 0,
+   "respondidas": 0,
    "falhas": 0
   },
   {
@@ -454,7 +474,8 @@
    "envios": 0,
    "entregues": 1,
    "lidas": 3,
-   "respondidas": 0
+   "respondidas": 0,
+   "falhas": 0
   },
   {
    "data": "2026-10-23",
@@ -463,7 +484,18 @@
    "envios": 0,
    "entregues": 0,
    "lidas": 2,
-   "respondidas": 0
+   "respondidas": 0,
+   "falhas": 0
+  },
+  {
+   "data": "2026-10-23",
+   "numero": "5521966693238",
+   "vendedor": "Rafael Reis",
+   "envios": 2,
+   "entregues": 0,
+   "lidas": 0,
+   "respondidas": 0,
+   "falhas": 0
   }
  ],
  "status": [
