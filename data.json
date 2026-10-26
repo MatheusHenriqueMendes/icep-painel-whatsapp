@@ -1,5 +1,5 @@
 {
- "geradoEm": "2026-10-26T20:05:57.228Z",
+ "geradoEm": "2026-10-26T20:20:45.839Z",
  "fonteEnvios": "fluxo",
  "rows": [
   {
@@ -505,6 +505,16 @@
    "entregues": 0,
    "lidas": 0,
    "respondidas": 0,
+   "falhas": 0
+  },
+  {
+   "data": "2026-10-26",
+   "numero": "5521968950069",
+   "vendedor": "Caroline Oliveira",
+   "envios": 0,
+   "entregues": 0,
+   "lidas": 0,
+   "respondidas": 2,
    "falhas": 0
   },
   {
