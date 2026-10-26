@@ -1,5 +1,5 @@
 {
- "geradoEm": "2026-10-26T14:12:43.367Z",
+ "geradoEm": "2026-10-26T14:30:44.529Z",
  "fonteEnvios": "fluxo",
  "rows": [
   {
@@ -524,7 +524,7 @@
    "envios": 0,
    "entregues": 0,
    "lidas": 0,
-   "respondidas": 32,
+   "respondidas": 37,
    "falhas": 0
   }
  ],
