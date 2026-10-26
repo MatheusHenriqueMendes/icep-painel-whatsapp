@@ -1,5 +1,5 @@
 {
- "geradoEm": "2026-10-26T19:33:16.164Z",
+ "geradoEm": "2026-10-26T19:49:11.532Z",
  "fonte": "fluxo de disparo",
  "numerosAtivos": [
   "5521968566838",
@@ -278,7 +278,7 @@
    "data": "2026-10-26",
    "numero": "5521966354719",
    "vendedor": "Caroline Oliveira",
-   "envios": 12,
+   "envios": 106,
    "falhas": 0,
    "descartados": 0
   }
