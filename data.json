@@ -1,5 +1,5 @@
 {
- "geradoEm": "2026-10-26T19:18:42.118Z",
+ "geradoEm": "2026-10-26T19:33:57.204Z",
  "fonteEnvios": "fluxo",
  "rows": [
   {
@@ -509,12 +509,22 @@
   },
   {
    "data": "2026-10-26",
+   "numero": "5521966354719",
+   "vendedor": "Caroline Oliveira",
+   "envios": 12,
+   "entregues": 0,
+   "lidas": 0,
+   "respondidas": 0,
+   "falhas": 0
+  },
+  {
+   "data": "2026-10-26",
    "numero": "5521968566838",
    "vendedor": "Gabriel Moreira",
    "envios": 64,
    "entregues": 0,
    "lidas": 0,
-   "respondidas": 7,
+   "respondidas": 9,
    "falhas": 0
   },
   {
@@ -532,20 +542,20 @@
   {
    "numero": "5521990853689",
    "vendedor": "João Gomes",
-   "qualidade": "RED",
-   "status": "BANNED",
-   "limite": "TIER_2K",
-   "nome_exibicao": "João Gomes",
-   "status_nome": "DECLINED"
+   "qualidade": "SEM_LEITURA",
+   "status": "SEM_LEITURA",
+   "limite": null,
+   "nome_exibicao": null,
+   "status_nome": null
   },
   {
    "numero": "5521968566838",
    "vendedor": "Gabriel Moreira",
-   "qualidade": "RED",
-   "status": "BANNED",
-   "limite": "TIER_2K",
-   "nome_exibicao": "Camila Menezes",
-   "status_nome": "DECLINED"
+   "qualidade": "SEM_LEITURA",
+   "status": "SEM_LEITURA",
+   "limite": null,
+   "nome_exibicao": null,
+   "status_nome": null
   }
  ],
  "tempoRetorno": null,
