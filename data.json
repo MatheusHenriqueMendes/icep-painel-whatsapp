@@ -1,5 +1,5 @@
 {
- "geradoEm": "2026-10-29T13:08:45.128Z",
+ "geradoEm": "2026-10-29T13:25:46.256Z",
  "fonteEnvios": "fluxo",
  "rows": [
   {
@@ -640,12 +640,21 @@
   },
   {
    "data": "2026-10-29",
+   "numero": "5521968566838",
+   "vendedor": "Gabriel Moreira",
+   "envios": 0,
+   "entregues": 0,
+   "lidas": 0,
+   "respondidas": 1
+  },
+  {
+   "data": "2026-10-29",
    "numero": "5521990860631",
    "vendedor": "Marlon Matos",
    "envios": 0,
    "entregues": 0,
    "lidas": 0,
-   "respondidas": 32
+   "respondidas": 35
   },
   {
    "data": "2026-10-29",
