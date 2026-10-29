@@ -1,5 +1,5 @@
 {
- "geradoEm": "2026-10-29T12:04:51.815Z",
+ "geradoEm": "2026-10-29T12:36:48.464Z",
  "fonteEnvios": "fluxo",
  "rows": [
   {
@@ -637,6 +637,15 @@
    "entregues": 0,
    "lidas": 0,
    "respondidas": 40
+  },
+  {
+   "data": "2026-10-29",
+   "numero": "5521990860631",
+   "vendedor": "Marlon Matos",
+   "envios": 0,
+   "entregues": 0,
+   "lidas": 0,
+   "respondidas": 8
   }
  ],
  "status": [
