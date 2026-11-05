@@ -1,5 +1,5 @@
 {
- "geradoEm": "2026-11-05T12:20:57.952Z",
+ "geradoEm": "2026-11-05T12:37:05.861Z",
  "fonteEnvios": "fluxo",
  "rows": [
   {
@@ -754,6 +754,15 @@
    "entregues": 0,
    "lidas": 0,
    "respondidas": 33
+  },
+  {
+   "data": "2026-11-05",
+   "numero": "5521966618116",
+   "vendedor": "Rafael Reis",
+   "envios": 0,
+   "entregues": 0,
+   "lidas": 0,
+   "respondidas": 1
   }
  ],
  "status": [
